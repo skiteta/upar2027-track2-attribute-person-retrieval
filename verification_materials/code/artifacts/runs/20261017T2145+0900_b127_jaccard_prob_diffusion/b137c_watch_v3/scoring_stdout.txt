@@ -1,0 +1,17 @@
+
+----------------------------------------------
+Scoring Program started!
+----------------------------------------------
+
+[score] task=retrieval gallery=29248 queries=893 attributes=40
+[score] loaded rankings.npy: 893 queries x 29248 gallery images
+[score] scores: {"mAP": 0.418136, "mAP_std": 0.125337, "Rank-1": 0.394486, "Rank-1_std": 0.064786, "Rank-5": 0.567449, "Rank-5_std": 0.139656, "Rank-10": 0.642728, "Rank-10_std": 0.163164, "mINP": 0.293015, "mINP_std": 0.206367, "mADM": 0.701395, "mADM_std": 0.094082}
+
+---------------------------------
+[OK] Total duration: 2.52s
+---------------------------------
+
+----------------------------------------------
+[OK] Scoring Program executed successfully!
+----------------------------------------------
+

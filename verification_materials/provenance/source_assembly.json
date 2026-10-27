@@ -1,0 +1,75 @@
+{
+  "base_code_archive_sha256": "ba1b469318ecf7e09193255348e4293b8d6d8ac6c92a8be3b44d23e080f58b9d",
+  "supplement": {
+    "schema": 2,
+    "scope": "Local supplement; no upload or approved model mutation.",
+    "base_archive": {
+      "path": "artifacts/runs/20261023T1217+0900_b153c_delivery_finalization/code_archive_v5/B153C_code_delivery_v2.zip",
+      "sha256": "ba1b469318ecf7e09193255348e4293b8d6d8ac6c92a8be3b44d23e080f58b9d"
+    },
+    "files": [
+      {
+        "path": "scripts/compact_b153c_head_source.py",
+        "sha256": "7d7b1465e865ea7c2a0fa89b41b7cf8adc25d5704bf8e0d1271e1d66c65d08ca"
+      },
+      {
+        "path": "scripts/audit_saved_query_gains.py",
+        "sha256": "b776d4329e93007f20735e0c5975ded80cdf465706ca12f19dadc52c933d62c4"
+      },
+      {
+        "path": "tests/test_compact_b153c_head_source.py",
+        "sha256": "0b03c6632be2c5e0adbec279217e3eaa77efcb41a0b1b0240c76bcf7831c2d65"
+      },
+      {
+        "path": "tests/test_audit_saved_query_gains.py",
+        "sha256": "312455154445960834374332b6b8bce817bf7577121df8fffd963c8e5fc240c7"
+      },
+      {
+        "path": "tests/test_h1_rank_scope.py",
+        "sha256": "00222b7b8e5ff9361d8b713eff964a9dfb0571ec8b72bc282d1f49237ed461eb"
+      },
+      {
+        "path": "artifacts/runs/20261023T1535+0900_b153c_cpu_robustness_and_compact_delivery/compact_heads_v2/hp6_all_heads.safetensors",
+        "sha256": "31bf9a6d6b66f6b1820fbbfa5f2f910ad6531cc0fcda627a1b00f02380f773d3"
+      },
+      {
+        "path": "artifacts/runs/20261023T1535+0900_b153c_cpu_robustness_and_compact_delivery/compact_heads_v2/receipt.json",
+        "sha256": "6bfede75c5db870abf27877b0909e291d840ff56fef75d4202b1c9dcd77f7960"
+      },
+      {
+        "path": "artifacts/runs/20261023T1535+0900_b153c_cpu_robustness_and_compact_delivery/compact_only_v1/receipt.json",
+        "sha256": "0853b1b91ae079dcf62aa3a2e3186aab090416a9861b5ef4d300ed9560687566"
+      },
+      {
+        "path": "artifacts/runs/20261023T1535+0900_b153c_cpu_robustness_and_compact_delivery/robustness_spec_v1.json",
+        "sha256": "20b24c9ca97e25f1592ba2631e97988e1291082a510c6c70b61eba5399631683"
+      },
+      {
+        "path": "artifacts/runs/20261023T1535+0900_b153c_cpu_robustness_and_compact_delivery/robustness_report_v1.json",
+        "sha256": "083e45c0a5167e3252e906486a9704a9b0884ffcadb14d40b60bf7640e556655"
+      },
+      {
+        "path": "artifacts/runs/20261023T1535+0900_b153c_cpu_robustness_and_compact_delivery/rank_scope_before.xml",
+        "sha256": "c405cebda835adb75f0bb41b66a11430b9c9183c5ceae93984921be21f8bcf22"
+      },
+      {
+        "path": "artifacts/runs/20261023T1535+0900_b153c_cpu_robustness_and_compact_delivery/cpu_tests_after.xml",
+        "sha256": "e7b60c326b3b35332be0d0c0ad1244c01a67bde02ff6c9002daad6902e8e160b"
+      }
+    ],
+    "install": "Extract the base into a new directory; extract the supplement under code/. No collisions: the fixed rank test was omitted from the base.",
+    "head_source": {
+      "bytes": 1967016,
+      "avoided_transfer_bytes": 3362088880,
+      "not_a_backbone_checkpoint": true,
+      "source_preserved": true
+    },
+    "reconstruction": "From code/, supply the other EMA inputs, qm head backup, two pos-weight NPZ files and packaged model_1.weights.pt at the paths pinned in compact_only_v1/receipt.json, then run CUDA_VISIBLE_DEVICES= PYTHONDONTWRITEBYTECODE=1 /path/to/training-venv/bin/python scripts/compact_b153c_head_source.py --workspace . --output /new/output/path --compact-source artifacts/runs/20261023T1535+0900_b153c_cpu_robustness_and_compact_delivery/compact_heads_v2/hp6_all_heads.safetensors --origin-receipt artifacts/runs/20261023T1535+0900_b153c_cpu_robustness_and_compact_delivery/compact_heads_v2/receipt.json. Full hp6_all is NOT required in this mode; the other heavyweight inputs are not in this supplement.",
+    "verification": "compact_only_v1 ran in /tmp/upar-b153c-compact-only.XNlTq2 without an hp6_all parent at all. Other required inputs were symlinked read-only to the original workspace; this is a missing-parent dependency test, not an isolated fresh-environment or GPU replay.",
+    "privacy": "No new team contact details. Private fact-sheet source stored separately and not included.",
+    "scientific_limits": "No new accuracy gain or independent evaluation. Conditional saved-development bootstrap is unadjusted for selection. Submission consent and model ZIP unchanged."
+  },
+  "scope": "Historical source closure, a superset also containing later experiments. B137C inference is only the exact model ZIP. Added helpers do not alter model/training code.",
+  "model_modified": false,
+  "source_ancestry_gaps_repaired": false
+}

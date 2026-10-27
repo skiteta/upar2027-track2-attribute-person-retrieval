@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+project_root="$(cd "${script_dir}/.." && pwd -P)"
+uv_bin="${project_root}/.tools/uv-x86_64-unknown-linux-gnu/uv"
+
+if [[ ! -x "${uv_bin}" ]]; then
+  echo "Missing workspace-local uv binary: ${uv_bin}" >&2
+  exit 2
+fi
+
+export UV_PYTHON_INSTALL_DIR="${project_root}/.tools/python"
+export UV_CACHE_DIR="${project_root}/.cache/uv"
+cd "${project_root}"
+exec "${uv_bin}" "$@"

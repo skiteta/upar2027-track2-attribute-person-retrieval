@@ -1,0 +1,63 @@
+{
+ "pkg": "package",
+ "seed": 0,
+ "queries": 893,
+ "gallery": 29248,
+ "entry_seconds": 9.023980350932106,
+ "stages": [
+  {
+   "event": "score_enter",
+   "t": 0.001
+  },
+  {
+   "event": "score_blas",
+   "t": 0.001
+  },
+  {
+   "event": "score_done",
+   "t": 0.044
+  },
+  {
+   "event": "graph_enter",
+   "t": 0.044
+  },
+  {
+   "event": "feature_rerank_enter",
+   "t": 0.044
+  },
+  {
+   "event": "b132c_graphs_done",
+   "t": 3.797,
+   "graph_seconds": 3.7293
+  },
+  {
+   "event": "b132c_diff_done",
+   "t": 5.572,
+   "diff_seconds": 1.7753
+  },
+  {
+   "event": "b132c_score_done",
+   "t": 6.403,
+   "score_seconds": 0.8309
+  },
+  {
+   "event": "b132c_pentj_body_rerank",
+   "t": 9.014,
+   "graph_seconds": 3.7293,
+   "total_seconds": 8.946
+  },
+  {
+   "event": "feature_reranked",
+   "t": 9.024,
+   "total_seconds": 8.9792
+  },
+  {
+   "event": "ranked",
+   "t": 9.024
+  }
+ ],
+ "distances_sha_raw": "ae9ac535629352058df2e6efd1a6ee101674d7c7604464d6b782c20b5a9d618a",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+ "peak_gpu_reserved_gib": 5.5078125,
+ "time": "2026-10-27 14:23:44"
+}

@@ -1,0 +1,427 @@
+{
+ "started": "2026-10-22T22:15:43+0900",
+ "member_0": {
+  "keys_changed_vs_B124C_model_0": [
+   "head.base.bias",
+   "head.base.weight",
+   "head.bias",
+   "head.k.weight",
+   "head.out",
+   "head.q",
+   "head.weight"
+  ],
+  "head_recompute_pack_b137c": {
+   "head.base.bias": {
+    "exact": true,
+    "values_differ": 0,
+    "max_abs": 0.0
+   },
+   "head.base.weight": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 40960,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   },
+   "head.bias": {
+    "exact": true,
+    "values_differ": 0,
+    "max_abs": 0.0
+   },
+   "head.k.weight": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 262144,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   },
+   "head.out": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 40960,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   },
+   "head.q": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 10240,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   },
+   "head.weight": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 40960,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   },
+   "head.weight<-head.base.weight": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 40960,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   },
+   "head.bias<-head.base.bias": {
+    "exact": true,
+    "values_differ": 0,
+    "max_abs": 0.0
+   }
+  },
+  "backbone_soup_recompute_vs_B124C_all_keys": {
+   "summary": {
+    "compared": 308,
+    "exact": 260,
+    "not_exact": 48,
+    "not_exact_keys": {
+     "backbone.blocks.0.attn.qkv.weight": {
+      "exact": false,
+      "codes_differ": 1878669,
+      "codes_total": 3145728,
+      "max_code_delta": 254,
+      "scales_differ": 1983,
+      "max_abs_dequant": 0.6390113830566406
+     },
+     "backbone.blocks.0.attn.qkv.bias": {
+      "exact": false,
+      "values_differ": 1984,
+      "max_abs": 14.21484375
+     },
+     "backbone.blocks.1.attn.qkv.weight": {
+      "exact": false,
+      "codes_differ": 2005290,
+      "codes_total": 3145728,
+      "max_code_delta": 254,
+      "scales_differ": 1983,
+      "max_abs_dequant": 0.4981527328491211
+     },
+     "backbone.blocks.1.attn.qkv.bias": {
+      "exact": false,
+      "values_differ": 1984,
+      "max_abs": 7.732421875
+     },
+     "backbone.blocks.2.attn.qkv.weight": {
+      "exact": false,
+      "codes_differ": 2008475,
+      "codes_total": 3145728,
+      "max_code_delta": 254,
+      "scales_differ": 1981,
+      "max_abs_dequant": 0.46763134002685547
+     },
+     "backbone.blocks.2.attn.qkv.bias": {
+      "exact": false,
+      "values_differ": 1984,
+      "max_abs": 9.0703125
+     },
+     "backbone.blocks.3.attn.qkv.weight": {
+      "exact": false,
+      "codes_differ": 2010456,
+      "codes_total": 3145728,
+      "max_code_delta": 254,
+      "scales_differ": 1984,
+      "max_abs_dequant": 0.33435821533203125
+     },
+     "backbone.blocks.3.attn.qkv.bias": {
+      "exact": false,
+      "values_differ": 1984,
+      "max_abs": 7.6044921875
+     },
+     "backbone.blocks.4.attn.qkv.weight": {
+      "exact": false,
+      "codes_differ": 2013231,
+      "codes_total": 3145728,
+      "max_code_delta": 254,
+      "scales_differ": 1979,
+      "max_abs_dequant": 0.5029973983764648
+     },
+     "backbone.blocks.4.attn.qkv.bias": {
+      "exact": false,
+      "values_differ": 1983,
+      "max_abs": 12.6142578125
+     },
+     "backbone.blocks.5.attn.qkv.weight": {
+      "exact": false,
+      "codes_differ": 2013098,
+      "codes_total": 3145728,
+      "max_code_delta": 254,
+      "scales_differ": 1981,
+      "max_abs_dequant": 0.5816020965576172
+     },
+     "backbone.blocks.5.attn.qkv.bias": {
+      "exact": false,
+      "values_differ": 1983,
+      "max_abs": 19.36328125
+     }
+    },
+    "codes_differ_total": 48191638,
+    "codes_total_in_not_exact": 75497472,
+    "max_code_delta": 254,
+    "max_abs_dequant": 19.36328125
+   },
+   "skipped_not_in_safetensors": []
+  },
+  "note": "pLq_maskv2 (knob_sweep EMA) is used for the backbone in place of the deleted pw-aligned copy b115g/tmp_maskv2_all_s7_pw: make_pw_aligned.py only shifts head.base.bias/head.bias"
+ },
+ "member_2": {
+  "keys_changed_vs_B124C_model_2": [
+   "head.weight"
+  ],
+  "head_recompute_pack_b137c": {
+   "head.bias": {
+    "exact": true,
+    "values_differ": 0,
+    "max_abs": 0.0
+   },
+   "head.weight": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 40960,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   }
+  },
+  "backbone_soup_recompute_vs_B124C_all_unfused_keys": {
+   "summary": {
+    "compared": 366,
+    "exact": 294,
+    "not_exact": 72,
+    "not_exact_keys": {
+     "backbone.blocks.0.attn.q_proj.weight": {
+      "exact": false,
+      "codes_differ": 571304,
+      "codes_total": 1048576,
+      "max_code_delta": 254,
+      "scales_differ": 992,
+      "max_abs_dequant": 1.1128196716308594
+     },
+     "backbone.blocks.0.attn.q_proj.bias": {
+      "exact": false,
+      "values_differ": 992,
+      "max_abs": 4.98095703125
+     },
+     "backbone.blocks.0.attn.k_proj.weight": {
+      "exact": false,
+      "codes_differ": 508748,
+      "codes_total": 1048576,
+      "max_code_delta": 254,
+      "scales_differ": 992,
+      "max_abs_dequant": 0.6867542266845703
+     },
+     "backbone.blocks.1.attn.q_proj.weight": {
+      "exact": false,
+      "codes_differ": 860815,
+      "codes_total": 1048576,
+      "max_code_delta": 254,
+      "scales_differ": 991,
+      "max_abs_dequant": 0.8788223266601562
+     },
+     "backbone.blocks.1.attn.q_proj.bias": {
+      "exact": false,
+      "values_differ": 992,
+      "max_abs": 17.033203125
+     },
+     "backbone.blocks.1.attn.k_proj.weight": {
+      "exact": false,
+      "codes_differ": 857035,
+      "codes_total": 1048576,
+      "max_code_delta": 254,
+      "scales_differ": 991,
+      "max_abs_dequant": 0.7594013214111328
+     },
+     "backbone.blocks.2.attn.q_proj.weight": {
+      "exact": false,
+      "codes_differ": 986605,
+      "codes_total": 1048576,
+      "max_code_delta": 254,
+      "scales_differ": 992,
+      "max_abs_dequant": 0.5966205596923828
+     },
+     "backbone.blocks.2.attn.q_proj.bias": {
+      "exact": false,
+      "values_differ": 991,
+      "max_abs": 11.515625
+     },
+     "backbone.blocks.2.attn.k_proj.weight": {
+      "exact": false,
+      "codes_differ": 983801,
+      "codes_total": 1048576,
+      "max_code_delta": 254,
+      "scales_differ": 992,
+      "max_abs_dequant": 0.8407917022705078
+     },
+     "backbone.blocks.3.attn.q_proj.weight": {
+      "exact": false,
+      "codes_differ": 996810,
+      "codes_total": 1048576,
+      "max_code_delta": 254,
+      "scales_differ": 991,
+      "max_abs_dequant": 0.399200439453125
+     },
+     "backbone.blocks.3.attn.q_proj.bias": {
+      "exact": false,
+      "values_differ": 991,
+      "max_abs": 7.421875
+     },
+     "backbone.blocks.3.attn.k_proj.weight": {
+      "exact": false,
+      "codes_differ": 995217,
+      "codes_total": 1048576,
+      "max_code_delta": 254,
+      "scales_differ": 992,
+      "max_abs_dequant": 0.6955544948577881
+     }
+    },
+    "codes_differ_total": 46987259,
+    "codes_total_in_not_exact": 50331648,
+    "max_code_delta": 254,
+    "max_abs_dequant": 17.033203125
+   },
+   "skipped_not_in_safetensors": []
+  },
+  "fused_fc1_sample": {
+   "backbone.blocks.0.mlp.fc1.weight as cat('fc1_x', 'fc1_g')": {
+    "exact": false,
+    "note": "packaged shape (5472, 1024) vs (5460, 1024)"
+   },
+   "backbone.blocks.0.mlp.fc1.weight as cat('fc1_g', 'fc1_x')": {
+    "exact": false,
+    "note": "packaged shape (5472, 1024) vs (5460, 1024)"
+   },
+   "backbone.blocks.0.mlp.fc1.bias as cat('fc1_x', 'fc1_g')": {
+    "exact": false,
+    "note": "packaged shape (5472,) vs (5460,)"
+   },
+   "backbone.blocks.0.mlp.fc1.bias as cat('fc1_g', 'fc1_x')": {
+    "exact": false,
+    "note": "packaged shape (5472,) vs (5460,)"
+   },
+   "backbone.blocks.11.mlp.fc1.weight as cat('fc1_x', 'fc1_g')": {
+    "exact": false,
+    "note": "packaged shape (5472, 1024) vs (5460, 1024)"
+   },
+   "backbone.blocks.11.mlp.fc1.weight as cat('fc1_g', 'fc1_x')": {
+    "exact": false,
+    "note": "packaged shape (5472, 1024) vs (5460, 1024)"
+   },
+   "backbone.blocks.11.mlp.fc1.bias as cat('fc1_x', 'fc1_g')": {
+    "exact": false,
+    "note": "packaged shape (5472,) vs (5460,)"
+   },
+   "backbone.blocks.11.mlp.fc1.bias as cat('fc1_g', 'fc1_x')": {
+    "exact": false,
+    "note": "packaged shape (5472,) vs (5460,)"
+   },
+   "backbone.blocks.23.mlp.fc1.weight as cat('fc1_x', 'fc1_g')": {
+    "exact": false,
+    "note": "packaged shape (5472, 1024) vs (5460, 1024)"
+   },
+   "backbone.blocks.23.mlp.fc1.weight as cat('fc1_g', 'fc1_x')": {
+    "exact": false,
+    "note": "packaged shape (5472, 1024) vs (5460, 1024)"
+   },
+   "backbone.blocks.23.mlp.fc1.bias as cat('fc1_x', 'fc1_g')": {
+    "exact": false,
+    "note": "packaged shape (5472,) vs (5460,)"
+   },
+   "backbone.blocks.23.mlp.fc1.bias as cat('fc1_g', 'fc1_x')": {
+    "exact": false,
+    "note": "packaged shape (5472,) vs (5460,)"
+   }
+  }
+ },
+ "member_1": {
+  "keys_changed_vs_traced_b136c_model_1": [
+   "head.base.bias",
+   "head.base.weight",
+   "head.bias",
+   "head.k.weight",
+   "head.out",
+   "head.q",
+   "head.weight"
+  ],
+  "keys_changed_vs_traced_b137c_model_1": [
+   "head.base.bias",
+   "head.base.weight",
+   "head.bias",
+   "head.out",
+   "head.q",
+   "head.weight"
+  ],
+  "head_recompute_pack_b138c_dich3_ltype2_r00": {
+   "head.q": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 10240,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   },
+   "head.k.weight": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 327680,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   },
+   "head.out": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 51200,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   },
+   "head.base.weight": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 51200,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   },
+   "head.base.bias": {
+    "exact": true,
+    "values_differ": 0,
+    "max_abs": 0.0
+   },
+   "head.weight<-head.base.weight": {
+    "exact": true,
+    "codes_differ": 0,
+    "codes_total": 51200,
+    "max_code_delta": 0,
+    "scales_differ": 0,
+    "max_abs_dequant": 0.0
+   },
+   "head.bias<-head.base.bias": {
+    "exact": true,
+    "values_differ": 0,
+    "max_abs": 0.0
+   }
+  },
+  "r224_is_mean_of_d3hp224q_d3hp224qr": "exact in exact arithmetic (hp6_all = uniform 1/6 soup of q, qr, qrq, qs, 224q, 224qr)",
+  "backbone_soup_recompute_sampled_blocks": {
+   "blocks": [
+    0,
+    10,
+    20,
+    31
+   ],
+   "summary": {
+    "compared": 66,
+    "exact": 66,
+    "not_exact": 0
+   },
+   "skipped_not_in_safetensors": []
+  }
+ },
+ "wall_seconds": 25.9
+}

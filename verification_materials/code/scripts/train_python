@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+project_root="$(cd "${script_dir}/.." && pwd -P)"
+python_bin="${project_root}/.venv-train/bin/python"
+
+if [[ ! -x "${python_bin}" ]]; then
+  echo "Missing Blackwell training environment: ${python_bin}" >&2
+  exit 2
+fi
+
+export PYTHONPATH="${project_root}/src${PYTHONPATH:+:${PYTHONPATH}}"
+cd "${project_root}"
+exec "${python_bin}" "$@"

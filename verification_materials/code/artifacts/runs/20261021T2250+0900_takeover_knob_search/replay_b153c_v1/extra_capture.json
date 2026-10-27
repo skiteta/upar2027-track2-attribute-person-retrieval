@@ -1,0 +1,18 @@
+{
+  "candidate": "B153C_B152C_ATTRW6_L1W_RERANK",
+  "eva_features": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261021T2250+0900_takeover_knob_search/replay_b153c_v1/eva_features.npy",
+    "sha256": "1af1f356b9de235b2d689cffb858abe7f52aab71f265d8a5072a26852e732a76",
+    "size": 136835200
+  },
+  "hp_features": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261021T2250+0900_takeover_knob_search/replay_b153c_v1/hp_features.npy",
+    "sha256": "1d10c4bb5d2aa07966bbdd4b85bf991af3c3e25625712844260a1625a70d9214",
+    "size": 171043968
+  },
+  "member_std": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261021T2250+0900_takeover_knob_search/replay_b153c_v1/member_std.npy",
+    "sha256": "b3446c80b16e2bcf1dc67d4e9011695bc3d16c57d28f8f5d639a8fa78eac6d71",
+    "size": 5345248
+  }
+}

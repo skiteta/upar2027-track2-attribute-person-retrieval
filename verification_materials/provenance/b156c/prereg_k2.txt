@@ -1,0 +1,27 @@
+Round K2 -- deployable re-rank / attribute-weight knobs on top of mw1_combo (B155C). Written 2026-10-27 14:06 JST, before
+any K2 result. POST-HOC REVISION OF THE GATE (stated, not presented as the original pre-registration):
+
+Why the gate is revised (evidence, all pre-existing):
+ (1) Public history (calib_report_v1, public_mevid_synth_calibration_v1): from B119G to B137C Synth stayed 0.793-0.796
+     while MEVID rose 0.552 -> 0.607; for B132C/B135C/B136C/B137C vs B131C, dMEVID = 0.84-1.34 x train hi15 delta and
+     dSynth = +3..+10 bps for local Synth-like gains of +30..+48. Public moves with hi15 (MEVID); lo1_4 is not a
+     validated Synth proxy.
+ (2) Cell noise (scratchpad cell_se.py on final_round_search r2m): source x multiplicity cell SEs are 4-10 bps
+     (PETA 5-14: n 134-159), so the old "no cell below -3 bps" rule rejects real changes by chance (worst z -1.4..-2.2
+     over 9 cells is typical under no effect).
+Original gate (fr_gate.py) is kept unchanged on disk; K2 uses gate v2 below.
+
+Configs (cfg_k2.json), each = mw1_combo + :
+  k2_s10_a38u          : K step 1.0, attr a38 x1.2
+  k2_s10_a00d_a38u     : K step 1.0, a0 /1.2, a38 x1.2
+  k2_s10_a00d_a38u_a16 : K step 1.0, a0 /1.2, a38 x1.2, a16 /1.1
+  k2_a00d_a38u_a16     : a0 /1.2, a38 x1.2, a16 /1.1
+  k2_nd75_a00d_a38u    : nd q 0.75, a0 /1.2, a38 x1.2
+(all keys exist in the deployed module rerank_param4_frozen.py / attribute_distance_weights; these were seen on the
+B153C base in final_round_search r1c/r2m, so this selection is post-hoc among previously evaluated ideas.)
+
+Gate v2 (vs mw1_combo): v_hi15 > 0, t_hi15 > 0, v_oof > 0, t_oof > 0; train paired bootstrap 95% CI of hi15 or overall
+excludes 0; every per-source delta (pooled over multiplicity) >= -5 bps on both surfaces; worst cell z >= -2.5 on both
+surfaces; pubmimic MEV >= mw1_combo and PUB >= mw1_combo - 1 bp. Among passers choose max of min(v_hi15, t_hi15).
+Public estimate for the winner: B155C estimate + 0.45 x mean(v_hi15, t_hi15) x 0.5 (shrink 0.5 for post-hoc selection).
+If none passes, B155C stays.

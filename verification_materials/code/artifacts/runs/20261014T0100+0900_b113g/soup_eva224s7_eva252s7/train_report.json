@@ -1,0 +1,10 @@
+{
+ "status": "SOUP_DONE",
+ "fold": "all",
+ "include_val": true,
+ "backbone": "eva02_l14_252",
+ "soup_of": [
+  "artifacts/runs/20261014T0100+0900_b113g/xres_eva224s7_as252",
+  "artifacts/runs/20261008T231500+0900_knob_sweep/eva02L252_all_trainval_seed20261007_ema0.999"
+ ]
+}

@@ -1,0 +1,270 @@
+{
+  "status": "PASS",
+  "candidate": "B139C_ANAT_MULTIRES_SPHERICAL_HEAD_RERANK",
+  "kind": "exact_new_b139c_anat_multires_spherical_head_same_input_CUDA32_graph_independent_reference",
+  "b139_anat_multires_spherical_head_rerank": {
+    "branches": [
+      {
+        "name": "pe",
+        "k": 20,
+        "w_pe": 1.0,
+        "w_eva": 0.0,
+        "w_hp": 0.0,
+        "weight": 0.275
+      },
+      {
+        "name": "eva",
+        "k": 20,
+        "w_pe": 0.0,
+        "w_eva": 1.0,
+        "w_hp": 0.0,
+        "weight": 0.23
+      },
+      {
+        "name": "j25_k28",
+        "k": 28,
+        "w_pe": 0.75,
+        "w_eva": 0.25,
+        "w_hp": 0.0,
+        "weight": 0.235
+      },
+      {
+        "name": "j50_k28",
+        "k": 28,
+        "w_pe": 0.5,
+        "w_eva": 0.5,
+        "w_hp": 0.0,
+        "weight": 0.19
+      },
+      {
+        "name": "tri25_k28",
+        "k": 28,
+        "w_pe": 0.5625,
+        "w_eva": 0.1875,
+        "w_hp": 0.25,
+        "weight": 0.07
+      }
+    ],
+    "cross_cos_alpha": 0.35,
+    "cos_c_hp": 0.2,
+    "max_hamming": 5,
+    "ham_tau": 0.172,
+    "margin_gamma": 1.83,
+    "jaccard_power": 0.8,
+    "prob_diffusion_alpha": 0.95,
+    "stage1_steps": 3,
+    "stage2_steps": 6,
+    "deg_beta": 0.35,
+    "tau_w": 5.0,
+    "trust_gamma": 0.25,
+    "std_trust_gamma": 0.4,
+    "coevolve_jac_low": 0.24,
+    "coevolve_jac_span": 0.3,
+    "coevolve_blend": 0.55,
+    "post_tau": 1.05,
+    "prob_clip_eps": 1e-05,
+    "entropy_delta": 0.35,
+    "nll_lam": 0.275,
+    "nll_lam_neg": 0.215,
+    "err_gamma": 1.0,
+    "err_gamma_neg": 0.97,
+    "base_dich_sym_loss": 1.28,
+    "dich_pos_nll_add": 0.08,
+    "dich_attrs": [
+      "Gender-Female",
+      "UpperBody-Length-Short",
+      "LowerBody-Length-Short"
+    ],
+    "score_ens_blend": 0.45,
+    "dist_diffusion_steps": 2,
+    "dist_diffusion_alpha": 0.205,
+    "dist_kappa": 0.2,
+    "exact_ent_delta": 0.45,
+    "exact_nll_lam": 0.43,
+    "exact_nll_lam_neg": 0.3,
+    "exact_err_gamma": 1.25,
+    "exact_err_gamma_neg": 1.25,
+    "exact_dich_sym_loss": 1.25,
+    "exact_branch_blend": 0.22,
+    "ex_diff_alpha": 0.07,
+    "ex_kappa": 0.24,
+    "ex_diff_head_blend": 0.5,
+    "exact_seed_blend": 0.72,
+    "tail_mul_kap": 0.04,
+    "seed_disagree_kap": 0.03,
+    "seed_kap_weight": false,
+    "seed_coh_beta": 0.25,
+    "ms_k1": 6,
+    "ms_temp1": 0.035,
+    "ms_blend": 0.22,
+    "sim_diff_alpha": 0.34,
+    "sim_diff_steps": 1,
+    "sim_diff_alpha2": 0.04,
+    "head_dq_blend": 0.15,
+    "ex_vis_alpha": 0.12,
+    "head_local_lam": 0.12,
+    "head_local_k": 12,
+    "head_beta": 0.044,
+    "head_tau": 0.225,
+    "body_alpha": 0.33,
+    "body_k0": 10,
+    "body_tau": 0.355,
+    "body_pow": 1.0,
+    "body_w_uni": true,
+    "body_ent_delta": 0.15,
+    "body_nll_lam": 0.05,
+    "body_nll_lam_neg": 0.0,
+    "body_err_gamma": 0.9,
+    "body_err_gamma_neg": 0.75,
+    "body_pos_q_mul": 0.7,
+    "body_dich_sym_loss": 0.0,
+    "body_d_alpha": 0.235,
+    "body_kap": 0.2,
+    "body_vis_scale": 1.35,
+    "body_head_keep": 3.5,
+    "body_head_tau": 0.55,
+    "anchor_spectra": [
+      {
+        "name": "pe",
+        "w_pe": 1.0,
+        "w_eva": 0.0,
+        "w_hp": 0.0,
+        "weight": 0.1
+      },
+      {
+        "name": "eva",
+        "w_pe": 0.0,
+        "w_eva": 1.0,
+        "w_hp": 0.0,
+        "weight": 0.1
+      },
+      {
+        "name": "j25",
+        "w_pe": 0.75,
+        "w_eva": 0.25,
+        "w_hp": 0.0,
+        "weight": 0.18
+      },
+      {
+        "name": "j50",
+        "w_pe": 0.5,
+        "w_eva": 0.5,
+        "w_hp": 0.0,
+        "weight": 0.18
+      },
+      {
+        "name": "tri25",
+        "w_pe": 0.5625,
+        "w_eva": 0.1875,
+        "w_hp": 0.25,
+        "weight": 0.16
+      },
+      {
+        "name": "tri40",
+        "w_pe": 0.4,
+        "w_eva": 0.3,
+        "w_hp": 0.3,
+        "weight": 0.14
+      },
+      {
+        "name": "pe_hp",
+        "w_pe": 0.65,
+        "w_eva": 0.0,
+        "w_hp": 0.35,
+        "weight": 0.07
+      },
+      {
+        "name": "eva_hp",
+        "w_pe": 0.0,
+        "w_eva": 0.65,
+        "w_hp": 0.35,
+        "weight": 0.07
+      }
+    ],
+    "anchor_top_m": 11,
+    "anchor_alpha_q": 0.126,
+    "anchor_temp_q": 0.052,
+    "anchor_gamma_q": 2.6,
+    "anchor_hub_norm": 0.35,
+    "symmetric_zero_fit": true
+  },
+  "active_edges_total": 2612038,
+  "pid": 570973,
+  "unequal_distance_values": 0,
+  "queries_with_different_ranks": 0,
+  "distance_max_abs": 0.0,
+  "capture": {
+    "capture.npz": {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/b139c_cuda_capture_v1/capture.npz",
+      "sha256": "0d4f281e87ed4cb6bc5f829477c4e17eaf30c8458eb55b93c20f41cfa94fa6af",
+      "size": 13388050
+    },
+    "features.npy": {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/b139c_cuda_capture_v1/features.npy",
+      "sha256": "54123c977274bfde5f6e519b859517e54415bde2dd27c730432e15eb199ebf02",
+      "size": 136835200
+    },
+    "eva_features.npy": {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/b139c_cuda_capture_v1/eva_features.npy",
+      "sha256": "1af1f356b9de235b2d689cffb858abe7f52aab71f265d8a5072a26852e732a76",
+      "size": 136835200
+    },
+    "hp_features.npy": {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/b139c_cuda_capture_v1/hp_features.npy",
+      "sha256": "1d10c4bb5d2aa07966bbdd4b85bf991af3c3e25625712844260a1625a70d9214",
+      "size": 171043968
+    },
+    "member_std.npy": {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/b139c_cuda_capture_v1/member_std.npy",
+      "sha256": "b3446c80b16e2bcf1dc67d4e9011695bc3d16c57d28f8f5d639a8fa78eac6d71",
+      "size": 5345248
+    },
+    "distances.npy": {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/b139c_cuda_capture_v1/distances.npy",
+      "sha256": "bc4675c8efa26d1f92e890de675cf363ed7fad0d160c10ed016ef4744965ffc3",
+      "size": 462620264
+    },
+    "execute_report.json": {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/b139c_cuda_capture_v1/execute_report.json",
+      "sha256": "cbbe2786585da7c9ec032a25b66213b31df136cf74ef2af3e44d07e7f7a1d589",
+      "size": 44421
+    },
+    "extra_capture.json": {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/b139c_cuda_capture_v1/extra_capture.json",
+      "sha256": "df84bd531008999b52c58928fcf7187ee18026e3581fbde0dbefb4979723169f",
+      "size": 949
+    }
+  },
+  "reference": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/b139c_reference_v1/independent_distances.npy",
+    "sha256": "bc4675c8efa26d1f92e890de675cf363ed7fad0d160c10ed016ef4744965ffc3",
+    "size": 462620264
+  },
+  "package_report": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/package_v14/complete.json",
+    "sha256": "68773ad2be85d3bc15f0c662824fe38dd6e13fe1cc611feb25d6b1464d22d379",
+    "size": 50910
+  },
+  "reference_inputs": {
+    "artifacts/runs/20261017T1129+0900_b121_runtime_repair2/full_replay_fp32_v1/capture.npz": {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T1129+0900_b121_runtime_repair2/full_replay_fp32_v1/capture.npz",
+      "sha256": "ee4567242703c2d0826fa7caf98050ab93fa43a3964b755fd4090df2442bc382",
+      "size": 13388050
+    },
+    "artifacts/runs/20261017T1129+0900_b121_runtime_repair2/full_replay_fp32_v1/features.npy": {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T1129+0900_b121_runtime_repair2/full_replay_fp32_v1/features.npy",
+      "sha256": "54123c977274bfde5f6e519b859517e54415bde2dd27c730432e15eb199ebf02",
+      "size": 136835200
+    },
+    "artifacts/runs/20261017T1129+0900_b121_runtime_repair2/actual_gpu_comparison_v3/graph_production_full.npz": {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T1129+0900_b121_runtime_repair2/actual_gpu_comparison_v3/graph_production_full.npz",
+      "sha256": "e957bf296d937e338991fb560a0fed178977745e1e3e0b454ba71129f8ba82b9",
+      "size": 1301073
+    }
+  },
+  "wall_seconds": 71.03994650498498,
+  "CPU_seconds": 97.221941887,
+  "peak_RSS_KiB": 4001156,
+  "quality_or_gold_claim": false,
+  "official_A10_runtime_guaranteed": false
+}

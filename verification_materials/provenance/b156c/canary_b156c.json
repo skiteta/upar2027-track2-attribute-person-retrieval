@@ -1,0 +1,48 @@
+{
+  "status": "PASS_CPU_SYNTHETIC_CANARIES",
+  "candidate": "B156C_B155C_K2_RERANK",
+  "model_sha256": "1279da344c73aa8c67ee55703ba7e2c6e7c1b9607e3a182e9c9e70499fb30844",
+  "verifier_sha256": "b4c865e71c2e76c541f57d02d186303b177b90b1008ff9f0f102bfb7565020ba",
+  "torch": "2.4.1+cu121",
+  "threads": 2,
+  "members": [
+    {
+      "name": "vit0_pe_core_l14_280",
+      "shape": [
+        4,
+        40
+      ],
+      "finite": true,
+      "max_abs": 8.940696716308594e-08,
+      "mean_abs": 6.9423551352088e-09,
+      "seconds": 3.4065106590278447,
+      "pass": true
+    },
+    {
+      "name": "vit1_dinov3_hp16_192",
+      "shape": [
+        4,
+        40
+      ],
+      "finite": true,
+      "max_abs": 1.7881393432617188e-07,
+      "mean_abs": 1.686712458592865e-08,
+      "seconds": 3.6604607400950044,
+      "pass": true
+    },
+    {
+      "name": "vit2_eva02_l14_252",
+      "shape": [
+        4,
+        40
+      ],
+      "finite": true,
+      "max_abs": 2.980232238769531e-07,
+      "mean_abs": 2.8640249283284902e-08,
+      "seconds": 2.349940284853801,
+      "pass": true
+    }
+  ],
+  "seconds": 14.180437573930249,
+  "scope": "Four fixed synthetic inputs per member; CPU loader + forward compatibility only. No full ranking, GPU timing, clean install or generalization claim."
+}

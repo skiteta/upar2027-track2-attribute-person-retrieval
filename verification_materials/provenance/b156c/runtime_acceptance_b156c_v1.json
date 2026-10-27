@@ -1,0 +1,53 @@
+{
+  "kind": "b153c_b139c_rerank_aqe_attrweights_post_runtime_acceptance_v1",
+  "status": "ACCEPTED_RUNTIME_PREFLIGHT",
+  "candidate": "B156C_B155C_K2_RERANK",
+  "artifact": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261021T2250+0900_takeover_knob_search/build_b156c_v1/B156C_B155C_K2_RERANK.zip",
+    "sha256": "1279da344c73aa8c67ee55703ba7e2c6e7c1b9607e3a182e9c9e70499fb30844",
+    "size": 1333500417
+  },
+  "verifier_source": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/src/upar/b153c_rerank_attrw_post_acceptance.py",
+    "sha256": "81ba516133076161243ee2dfc78e0c392efa18846d18b50839a1c134cc71cd06",
+    "size": 12275
+  },
+  "package_report": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261021T2250+0900_takeover_knob_search/build_b156c_v1/complete.json",
+    "sha256": "9585a8201ebec3c9cd3e8a1b1faedbb125a8fa9eb652278bdef7623b4a6ef416",
+    "size": 50755
+  },
+  "rerank_param_source": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261021T2250+0900_takeover_knob_search/rerank_param4_frozen.py",
+    "sha256": "0b4e5926e0056c6ad4d02cda31f47d495041bec0771349af53d17cdd640e2dca",
+    "size": 45294
+  },
+  "parent_artifact": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/package_v14/B139C_ANAT_MULTIRES_SPHERICAL_HEAD_RERANK.zip",
+    "sha256": "93507697d74aeba9f27df7b8fb2b411eaccc4f8ac8d1b1990dace1fbe2f4334d",
+    "size": 1333497552
+  },
+  "parent_acceptance": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/runtime_acceptance_v14.json",
+    "sha256": "e38cb42185b1539d1b54abb9f52de0919b1bcf2e79214b239302a5a364333487",
+    "size": 6603
+  },
+  "parent_verifier": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/src/upar/b127c_jaccard_prob_diffusion_acceptance.py",
+    "sha256": "2d8dad7e4dea489be9dc9aaea91509eb49d680bbfa2b841c6441318368fd5817",
+    "size": 15082
+  },
+  "runtime_report": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261021T2250+0900_takeover_knob_search/replay_b156c_v1/execute_report.json",
+    "sha256": "8a61ef5de3714a70718c8ceb13732ab60b3d48cfe7f773bcd6c3007668095946",
+    "size": 45469
+  },
+  "reference_report": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261021T2250+0900_takeover_knob_search/replay_b156c_v1/reference_report.json",
+    "sha256": "4e1b49f122bf603e33666a9e8d8a55ea275d7922ee1c98e568c3b78a48b95319",
+    "size": 324
+  },
+  "official_hardware_runtime_guaranteed": false,
+  "grants_submission_authority": false,
+  "quality_or_gold_claim": false
+}

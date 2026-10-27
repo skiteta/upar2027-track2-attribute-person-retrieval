@@ -1,0 +1,12 @@
+{
+ "status": "SOUP_DONE",
+ "fold": "all",
+ "include_val": true,
+ "backbone": "pe_core_l14_280",
+ "soup_of": [
+  "artifacts/runs/20261008T231500+0900_knob_sweep/peL280_attrq_all_trainval_seed20261007_ema0.999",
+  "artifacts/runs/20261008T231500+0900_knob_sweep/pLq_rankq_all_trainval_seed20261007_ema0.999",
+  "artifacts/runs/20261014T1400+0900_b115g/tmp_maskv2_all_s7_pw",
+  "artifacts/runs/20261008T231500+0900_knob_sweep/pLq_pswap03_all_trainval_seed20261007_ema0.999"
+ ]
+}

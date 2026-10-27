@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "at": "2026-10-23T06:44:10.117026+00:00",
+  "scope": "Exact head-only replacement of hp6_all for reconstruction; no accuracy change or backbone substitution.",
+  "checks": {
+    "same_keyset": true,
+    "compact_vs_packaged": true,
+    "original_vs_compact": true,
+    "source_metadata_unchanged": true
+  },
+  "extraction": {
+    "keys": [
+      "head.base.bias",
+      "head.base.weight",
+      "head.bias",
+      "head.k.weight",
+      "head.out",
+      "head.q",
+      "head.weight"
+    ],
+    "tensor_bytes": 1966400,
+    "all_tensor_bytes_equal": true
+  },
+  "packaged_head_keys": [
+    "head.base.bias",
+    "head.base.weight",
+    "head.bias",
+    "head.k.weight",
+    "head.out",
+    "head.q",
+    "head.weight"
+  ],
+  "sources": [
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261008T231500+0900_knob_sweep/d3hpq_all_trainval_seed20261007_ema0.999/model.safetensors",
+      "bytes": 3364055896,
+      "sha256": "96d32ec2d4eb38c0a0dcace1f3c9d5576eac714985dbcd72038b45ee0578c5f6"
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqr_all_trainval_seed20261007_ema0.999/model.safetensors",
+      "bytes": 3364055896,
+      "sha256": "4114b7cbd4e74571913767bb6a9695571f5f64da05cb2f74d42b34f033bd905d"
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqrq_all_trainval_seed20261007_ema0.999/model.safetensors",
+      "bytes": 3364055896,
+      "sha256": "4c7b4e8cbd98ed4ef93b9ab391728a1fd2ab1e5eda9ec92b3fc66b9e8a4ceb2c"
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqs_all_trainval_seed20261007_ema0.999/model.safetensors",
+      "bytes": 3364055896,
+      "sha256": "0cae4f3b300c57109137643bceeb67cd2f20b08fea742e54a7ed45a026cdd471"
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261018T0300+0900_gpu_representation_and_soup_cycle/extracted_features_v1/extra_heads_backup_v1.pt",
+      "bytes": 13612566,
+      "sha256": "1a9628ea3307119e1a627df482da4049d13863859078511bf14a12e124443e12"
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261008T231500+0900_knob_sweep/d3hpq_all_trainval_seed20261007_ema0.999/val_logits.npz",
+      "bytes": 18179674,
+      "sha256": "97aabed47291cb3d47500fd1ec36baf589dc652e2e770966ec87712ac8e6e4f9"
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqm_all_trainval_seed20261007_ema0.999/val_logits.npz",
+      "bytes": 18179674,
+      "sha256": "67226a0410142ba6ad93541d7d2d63a910b7669c9b67555ae0970a9ec6918a81"
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261021T2250+0900_takeover_knob_search/build_b153c_v1/package/assets/model_1.weights.pt",
+      "bytes": 843918689,
+      "sha256": "db06e562543fbb9ab0faa3a3012a8d55c29f8d2268fdaab70048d91d998d102d"
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261022T0400+0900_deliverables_prep/verify_weight_chain_v2.py",
+      "bytes": 16540,
+      "sha256": "d31dd14b43ff347dce03777a9d5aa1a3f4fdd8e2c8efd72a28d6bd7efdc2f262"
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/scripts/compact_b153c_head_source.py",
+      "bytes": 8546,
+      "sha256": "7d7b1465e865ea7c2a0fa89b41b7cf8adc25d5704bf8e0d1271e1d66c65d08ca"
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T0345+0900_hplus6/hp6_all/model.safetensors",
+      "bytes": 3364055896,
+      "sha256": "bc7afc421876a53311f7b82ee0cf481cc442dc16066bff6cea1543f64628cc6f"
+    }
+  ],
+  "compact": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261023T1535+0900_b153c_cpu_robustness_and_compact_delivery/compact_heads_v2/hp6_all_heads.safetensors",
+    "bytes": 1967016,
+    "sha256": "31bf9a6d6b66f6b1820fbbfa5f2f910ad6531cc0fcda627a1b00f02380f773d3"
+  },
+  "bytes_avoided_per_transfer": 3362088880,
+  "mode": "extract_from_full_parent",
+  "full_hp6_parent_opened_this_run": true,
+  "source_deleted": false,
+  "submission_modified": false,
+  "uploaded": false,
+  "limitations": [
+    "Deleted 224-px parent checkpoints remain unavailable; extraction does not repair their ancestry.",
+    "Other old verifiers still reference full hp6_all. This script's --compact-source/--origin-receipt path does not require it."
+  ]
+}

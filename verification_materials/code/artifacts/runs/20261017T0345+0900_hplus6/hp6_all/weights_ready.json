@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "status": "WEIGHTS_READY",
+  "protocol_ref": "artifacts/runs/20261017T0345+0900_hplus6/protocol_v1.json",
+  "output": "artifacts/runs/20261017T0345+0900_hplus6/hp6_all",
+  "model": {
+    "path": "artifacts/runs/20261017T0345+0900_hplus6/hp6_all/model.safetensors",
+    "sha256": "bc7afc421876a53311f7b82ee0cf481cc442dc16066bff6cea1543f64628cc6f",
+    "size": 3364055896
+  },
+  "config_sha256": "c989cc225f69241a86280d9251ce2861c4adf35ebc73f3926a2ba5dbf985368d",
+  "predictions_generated": false,
+  "flip_generated": false,
+  "views": [],
+  "new_training": false,
+  "gpu_seconds": 0,
+  "available_memory_gib_before": 47.73112487792969,
+  "elapsed_seconds": 40.06853365898132,
+  "cpu_seconds": 35.99117858199999,
+  "process_peak_rss_kib": 8801664,
+  "arithmetic": {
+    "parents": [
+      {
+        "path": "artifacts/runs/20261008T231500+0900_knob_sweep/d3hpq_all_trainval_seed20261007_ema0.999/model.safetensors",
+        "sha256": "96d32ec2d4eb38c0a0dcace1f3c9d5576eac714985dbcd72038b45ee0578c5f6",
+        "weight": 0.16666666666666669,
+        "size": 3364055896,
+        "mtime_ns": 1791953802464965957,
+        "device": 66306,
+        "inode": 58330216
+      },
+      {
+        "path": "artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqr_all_trainval_seed20261007_ema0.999/model.safetensors",
+        "sha256": "4114b7cbd4e74571913767bb6a9695571f5f64da05cb2f74d42b34f033bd905d",
+        "weight": 0.16666666666666669,
+        "size": 3364055896,
+        "mtime_ns": 1792050613176481058,
+        "device": 66306,
+        "inode": 58330842
+      },
+      {
+        "path": "artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqrq_all_trainval_seed20261007_ema0.999/model.safetensors",
+        "sha256": "4c7b4e8cbd98ed4ef93b9ab391728a1fd2ab1e5eda9ec92b3fc66b9e8a4ceb2c",
+        "weight": 0.16666666666666669,
+        "size": 3364055896,
+        "mtime_ns": 1792160397674409779,
+        "device": 66306,
+        "inode": 58331704
+      },
+      {
+        "path": "artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqs_all_trainval_seed20261007_ema0.999/model.safetensors",
+        "sha256": "0cae4f3b300c57109137643bceeb67cd2f20b08fea742e54a7ed45a026cdd471",
+        "weight": 0.16666666666666669,
+        "size": 3364055896,
+        "mtime_ns": 1792168766000163834,
+        "device": 66306,
+        "inode": 58331737
+      },
+      {
+        "path": "artifacts/runs/20261008T231500+0900_knob_sweep/d3hp224q_all_trainval_seed20261007_ema0.999/model.safetensors",
+        "sha256": "63b6a778fcfa8aea9851281299759e27c60e1f44e73b64d3532d1a34d8f9b753",
+        "weight": 0.16666666666666669,
+        "size": 3364055896,
+        "mtime_ns": 1792108984481409453,
+        "device": 66306,
+        "inode": 58331459
+      },
+      {
+        "path": "artifacts/runs/20261008T231500+0900_knob_sweep/d3hp224qr_all_trainval_seed20261007_ema0.999/model.safetensors",
+        "sha256": "4377e67d8c200d5326039101fa6556dca395645b5ee38088d24b3b5519827c32",
+        "weight": 0.16666666666666669,
+        "size": 3364055896,
+        "mtime_ns": 1792120712692925533,
+        "device": 66306,
+        "inode": 58331485
+      }
+    ],
+    "keys": 493,
+    "dtype": "float32",
+    "parent_order": [
+      "artifacts/runs/20261008T231500+0900_knob_sweep/d3hpq_all_trainval_seed20261007_ema0.999/model.safetensors",
+      "artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqr_all_trainval_seed20261007_ema0.999/model.safetensors",
+      "artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqrq_all_trainval_seed20261007_ema0.999/model.safetensors",
+      "artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqs_all_trainval_seed20261007_ema0.999/model.safetensors",
+      "artifacts/runs/20261008T231500+0900_knob_sweep/d3hp224q_all_trainval_seed20261007_ema0.999/model.safetensors",
+      "artifacts/runs/20261008T231500+0900_knob_sweep/d3hp224qr_all_trainval_seed20261007_ema0.999/model.safetensors"
+    ],
+    "arithmetic": "float32(parent) * float64_normalized_python_weight, then float32 add in parent order"
+  }
+}

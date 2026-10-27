@@ -1,0 +1,85 @@
+{
+  "status": "RUNNING_NOT_ACCEPTED",
+  "candidate": "B153C_B152C_ATTRW6_L1W_RERANK",
+  "sources": [
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/src/upar/fixed_revision_replay.py",
+      "sha256": "0075e96de23754545871f45bc2b1dfd0eea03864813a76099ed4b723aa1cd994",
+      "size": 7289
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261021T2250+0900_takeover_knob_search/build_b153c_v1/B153C_B152C_ATTRW6_L1W_RERANK.zip",
+      "sha256": "4f65c53b2498cc96b244239fdc0de93f1346832268060784160ecb9e127d6d0f",
+      "size": 1333500380
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/src/upar/data.py",
+      "sha256": "bba0824cf249c87da49e3dab6fceb9ff18b608e35c2f802c77bcc17cdb50c1a0",
+      "size": 5756
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/src/upar/submission.py",
+      "sha256": "64c1e735bba8d86d7c33994ec92f6742d0a3788235587df5c28ae009441b63f1",
+      "size": 4573
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/src/upar/gallery_feature_package.py",
+      "sha256": "e4e66b54f37c05fb9daf5228982b42f71ebf6e44cb75759398d23741a296cee9",
+      "size": 18481
+    }
+  ],
+  "annotations": [
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/starter_kit/data/annotations/task2/val/gt.csv",
+      "sha256": "783be600e359052c9dafe856cbfa2aee45bbd4e3eac10309394e2388bcf7c2bc",
+      "size": 4131332
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/starter_kit/data/annotations/task2/val/ids.csv",
+      "sha256": "7713818ec647bc02c151b073b3e486135beabfc29d3243e3cac919a84dc33ede",
+      "size": 1616030
+    },
+    {
+      "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/starter_kit/data/annotations/task2/val/queries.csv",
+      "sha256": "d9f850d7caa461b9acb2ccd9ff03521a3eb4e04fb9a9cab8b752a22f714c38dd",
+      "size": 281241
+    }
+  ],
+  "archive_members": {
+    "assets/config.json": "4d206d4f7bd496bbab77c3d07e54871bf6dd10824562eed98f748616483f22d6",
+    "assets/fallback_b015.ts": "5aeae3a9eb330ae4592015809ab8070ac95f8c435e896b672b125720692219b6",
+    "assets/model_0.block.ts": "a4ea250b08b188d1920d8a89b48d041ee8ca14927a9f1205897956845f4856e6",
+    "assets/model_0.head.ts": "3998fed38dd72ee4ccdb9de554285101696d47a4dd478bf342296cc0f9c12c34",
+    "assets/model_0.prefix.ts": "4f82f83a9ac1a56f9eaac4e819b59b70d3e2ae152c8bc3f063ea1ab2caf36be4",
+    "assets/model_0.weights.pt": "cafc45e636a1e05308867aaa808e946ad52022b9befb7f0f84b4e56b8fc2428b",
+    "assets/model_1.block.ts": "e1081e135299396d6a1e5f9458e4b1d7af5d9aada16d63620f93ca0a9f1c7bce",
+    "assets/model_1.head.ts": "c3cb5e01253bc05ca69090cc6dd9b1aaf401d51107d23607324b838170a75a3e",
+    "assets/model_1.prefix.ts": "7501bf3e6e5ab42172bb9d5b7436a934bcd3dd30a6b430dc798701a041b6f750",
+    "assets/model_1.weights.pt": "db06e562543fbb9ab0faa3a3012a8d55c29f8d2268fdaab70048d91d998d102d",
+    "assets/model_2.block.ts": "9c8b10ade6cf357e5dff0ce52313cd817cc20d2866f3829e9dfc143877042634",
+    "assets/model_2.head.ts": "974bd2a781e61be90106032e502bd70b8b3582e98e8eb342eba9e0e42206c4d3",
+    "assets/model_2.prefix.ts": "4ffc7e0b3ddc3f9a167d69f91161bc611906e3a0dd7eedaed6d9b8b08a66958a",
+    "assets/model_2.weights.pt": "34dadb3c28ba19407f8aeee4dec8fff3a225c58556463f5997beb8f81292302b",
+    "assets/pe_feature_head.ts": "4625b60a3d6d30ce2ac2907e13e2e7679d45dbf902fc28541cc8e8c43207384b",
+    "b121_agreement.py": "b42cecfee7ed262ff3312ef817d83b416509eb1eb0b197057ce9ebfe0227eb4b",
+    "b121_blas.py": "23a208f0a194ce7466fb36267909cd3f500e60c2dbbce3cfb7877f4dfd675af8",
+    "b121_deadline.py": "09cdb8cbe54e6e9e93e997910d42561b1c170aaddb4650e32dea7de206806014",
+    "b121_fp32_cosine_graph.py": "4f75b54fb3491201581b522a7b54318a7d3a17d8747016ab0675556892067292",
+    "b121_gpu_graph.py": "53c55c8a9d54c56fe91f5ee6f851dbe7b6b701619c2f8d48edf3c1ddb1f3d0ae",
+    "b121_graph.py": "c25b794e31160001631575305c89b2f4d90bbe350fa6b23e9f05c62ec172063c",
+    "b121_observe.py": "d7d286b3af3127989cb8ebdb8d5df5b2bca62180b18f4fd48e812b96172bbc14",
+    "b121_runtime.py": "a4c2dc22b6689171932256988ea4f79b653c6312c33b60651127e8fec61da466",
+    "b122c_constant.py": "7c3c99bf2701778fc1483e46526f01a51e248524b93c4b872052196848f7de1b",
+    "b127_jaccard_prob_diffusion.py": "02f4b18fde74c80fbe4004e1a8c3c909666408dabb2719018adf0ae36438b0ad",
+    "licenses/DINOv3_LICENSE.md": "25d122eb8f5b880fd23c736fb6ea8018ee45c12237e00b8a86d14c653904999e",
+    "licenses/MODEL_CARD_dinov3_hp16_192.md": "e37aaa5d81b587bae0d0dbedf9d56491672df524585c46dfa688347eb619989c",
+    "licenses/MODEL_CARD_eva02_l14_252.md": "18534848c3ef00872379903a239740e87cb6af9c5170c94f432d8e41ff72d6c6",
+    "licenses/MODEL_CARD_pe_core_l14_280.md": "707efd98717c5f36840a5f1c110cd1c297e48d41939d98653dc3d7807ed4a833",
+    "licenses/THIRD_PARTY_NOTICES.txt": "fa30404c934b2aca2b44005ec1c8be745b6a18728d7f06f234943311da0f40bd",
+    "metadata.yaml": "aa430c8b2fd03ea8c164f4f1b6cc490b9f9228861e54671626cc96096756d984",
+    "run.py": "973bae5923068e57fc11b6704d4b9aade9c77011ad6ec896e6fefee491379a3b"
+  },
+  "time_scale": 4.0,
+  "public_only": true,
+  "runtime_sources_unmodified": true
+}

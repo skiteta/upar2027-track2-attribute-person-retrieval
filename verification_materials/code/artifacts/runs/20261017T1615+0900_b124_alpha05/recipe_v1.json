@@ -1,0 +1,69 @@
+{
+  "schema": "fixed_alpha_revision_spec_v1",
+  "candidate": "B124C_CONSTANT_RESCUE_ALPHA05",
+  "parent_candidate": "B123C_CONSTANT_RESCUE_ALPHA03",
+  "parent_alpha": 0.3,
+  "alpha": 0.5,
+  "constant": 0.5599229900622915,
+  "parent_submission_id": 995164,
+  "parent_zip": "artifacts/runs/20261017T1422+0900_b123_alpha03/package_v1/B123C_CONSTANT_RESCUE_ALPHA03.zip",
+  "parent_zip_sha256": "4d85d05f147472354ce21f30009e9f5a7b7c2a79ff0c9ab5d12b4c3a307afb40",
+  "parent_runtime_sha256": "721743395b0afe5e9a37a9eaf603ff042ae7b36b5e4a654bd101a2a789f5ec46",
+  "parent_config": "artifacts/runs/20261017T1422+0900_b123_alpha03/package_v1/package/assets/config.json",
+  "historical_release": "artifacts/runs/20261017T1422+0900_b123_alpha03/release_execution_receipt_v1.json",
+  "historical_acceptance": "artifacts/runs/20261017T1422+0900_b123_alpha03/runtime_acceptance_v1.json",
+  "official_receipt": "artifacts/runs/20261017T1422+0900_b123_alpha03/watch_v1/final_receipt.json",
+  "fixed_inputs": {
+    "artifacts/runs/20261017T1422+0900_b123_alpha03/package_v1/package/assets/config.json": "f909edb74a65a89333efd3798835189396f9d5cae3c36c039a48bdbf84c36c8e",
+    "artifacts/runs/20261017T1422+0900_b123_alpha03/package_v1/complete.json": "5315f9ab3777164ccb4b015d4e6d6d94d04bb182a8790920a71c001a133aa3f1",
+    "artifacts/runs/20261017T1422+0900_b123_alpha03/release_execution_receipt_v1.json": "6bf529d4faec322f787925888d45111d25e0116842ee888515d89eec6e88fabd",
+    "artifacts/runs/20261017T1422+0900_b123_alpha03/runtime_acceptance_v1.json": "b698f39f53cdae90f178e8d25f8a40b44da82fcffe01617c791dd76c1c7ae4ef",
+    "artifacts/runs/20261017T1422+0900_b123_alpha03/watch_v1/final_receipt.json": "d4d8a8bf7faa6c6007972ce097c3a908db10322563d19ecaf6ad364608e74074",
+    "artifacts/runs/20261017T1422+0900_b123_alpha03/independent_official_review_v1.json": "3de1fc3fc18d1308cf82e464d3a29b2aed813b23e988183315e4ab351e31fdf2",
+    "artifacts/runs/20261017T1557+0900_rescue_strength_alpha05/protocol_v2.json": "303ea43c6affb0c66965b8238cb5ac362808f102476adbaf2db5a143c0c4c461",
+    "artifacts/runs/20261017T1557+0900_rescue_strength_alpha05/actual_exit_v2.json": "aabc1c35ce8bad6ad12bf857a628dbbce0843823436ad36b6561eeefb8643849",
+    "artifacts/runs/20261017T1557+0900_rescue_strength_alpha05/evaluation_v2/report.json": "fee9e806e5b1624044b3d8ab4b935f75a39065a1707546fb85fee82d1c1637c8",
+    "artifacts/runs/20261017T1557+0900_rescue_strength_alpha05/independent_result_review_v2.json": "f48761c79504f589d2fd89d2390bc8a4c226fe382165ec675a1c2cf4556cc348"
+  },
+  "source_inputs": {
+    "src/upar/fixed_alpha_revision.py": "1c3f92508a0949df977d03c1cffb571aa6b452d848268a2e949a72507228b892",
+    "tests/test_fixed_alpha_revision.py": "22e0b98037deddf799fec63f9131b097b49c6789ffe723f91d8ed7d2d66f2ce8",
+    "artifacts/runs/20261017T1615+0900_b124_alpha05/alpha05_adapter.py": "bf209325678b0d7167fe73659c59bb42a6916e1b2224a998758eda3ec2698c02",
+    "src/upar/data.py": "bba0824cf249c87da49e3dab6fceb9ff18b608e35c2f802c77bcc17cdb50c1a0",
+    "src/upar/submission.py": "64c1e735bba8d86d7c33994ec92f6742d0a3788235587df5c28ae009441b63f1",
+    "src/upar/fixed_revision_replay.py": "0075e96de23754545871f45bc2b1dfd0eea03864813a76099ed4b723aa1cd994",
+    "src/upar/gallery_feature_replay.py": "e30ad4681e6c4cbb8744a7994c10ac1bb8362dec15ee48e5f813888645298e59",
+    "src/upar/gallery_feature_package.py": "e4e66b54f37c05fb9daf5228982b42f71ebf6e44cb75759398d23741a296cee9",
+    "src/upar/numpy_blas_scope.py": "23a208f0a194ce7466fb36267909cd3f500e60c2dbbce3cfb7877f4dfd675af8",
+    "src/upar/b123_alpha03_acceptance.py": "1aebca071f119c98e307d386c8f3d52cef623d84b80e50d9feec96a740654d57"
+  },
+  "reference_capture": "artifacts/runs/20261017T1129+0900_b121_runtime_repair2/full_replay_fp32_v1/capture.npz",
+  "reference_features": "artifacts/runs/20261017T1129+0900_b121_runtime_repair2/full_replay_fp32_v1/features.npy",
+  "reference_graph": "artifacts/runs/20261017T1129+0900_b121_runtime_repair2/actual_gpu_comparison_v3/graph_production_full.npz",
+  "reference_inputs": {
+    "artifacts/runs/20261017T1129+0900_b121_runtime_repair2/full_replay_fp32_v1/capture.npz": "ee4567242703c2d0826fa7caf98050ab93fa43a3964b755fd4090df2442bc382",
+    "artifacts/runs/20261017T1129+0900_b121_runtime_repair2/full_replay_fp32_v1/features.npy": "54123c977274bfde5f6e519b859517e54415bde2dd27c730432e15eb199ebf02",
+    "artifacts/runs/20261017T1129+0900_b121_runtime_repair2/actual_gpu_comparison_v3/graph_production_full.npz": "e957bf296d937e338991fb560a0fed178977745e1e3e0b454ba71129f8ba82b9"
+  },
+  "scientific_scope": {
+    "local_alpha05_minus03_macro_mADM": 0.0007573747225225925,
+    "positive_sources": 2,
+    "macro_Rank10_delta": -0.003486750348675035,
+    "PETA_mADM_regression": true,
+    "evaluation": "Repeated development/source-held comparisons; query-conditional CI is not source-independent confirmation.",
+    "production_constant": "Exact unchanged deployed constant; diagnostic per-held-source constants are never transferred into this package.",
+    "parent_official_mADM": 0.676116,
+    "new_official_score": null,
+    "gold_probability": null
+  },
+  "execution_boundary": {
+    "prepared_not_built_or_replayed": true,
+    "new_full_ZIP_capture_required": true,
+    "new_actual_child_and_supervisor_exits_required": true,
+    "new_exact_distance_and_rank_reference_required": true,
+    "new_runtime_acceptance_and_submitter_dispatch_not_implemented": true,
+    "historical_parent_gate_not_rerun_under_changed_live_H1": true,
+    "fresh_native_resource_admission_required": true,
+    "automatic_retry_or_submission": false
+  }
+}

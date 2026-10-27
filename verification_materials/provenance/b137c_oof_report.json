@@ -1,0 +1,73 @@
+{
+  "candidate": "B137C_TRI_SPHERICAL_MULTIRES_HEAD_RERANK",
+  "package_dir": "artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/package_v12",
+  "artifact_zip": "artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/package_v12/B137C_TRI_SPHERICAL_MULTIRES_HEAD_RERANK.zip",
+  "artifact_sha256": "bae4b4c90846bf243d79bf65b5e0929dba5b0725903731c50fea264a05a83077",
+  "step_by_step_ablation_from_B131C_B135C_B136C_to_B137C": {
+    "00_B131C_public_baseline": {
+      "public_mADM": 0.699485,
+      "mixed_held_mADM": 0.722165,
+      "oof33k_mADM": 0.667333,
+      "oof33k_AP": 0.2455,
+      "dinov3_hp_tokens": 77,
+      "codabench_a10_total_s": 253.7
+    },
+    "01_B135C_hp4_2030_192_euclidean_soup": {
+      "public_mADM": 0.701088,
+      "oof33k_delta_bps_vs_B131C": 23.64,
+      "oof33k_AP_delta_bps_vs_B131C": 29.18,
+      "oof33k_R1_delta_bps_vs_B131C": 8.67,
+      "mixed_delta_bps_vs_B131C": 11.15,
+      "sim_public_delta_bps_vs_B131C": 21.36,
+      "codabench_a10_total_s": 259.82
+    },
+    "02_B136C_dual_spherical_head": {
+      "public_mADM": 0.701494,
+      "oof33k_delta_bps_vs_B131C": 37.06,
+      "oof33k_AP_delta_bps_vs_B131C": 48.28,
+      "oof33k_R1_delta_bps_vs_B131C": 20.22,
+      "oof33k_R10_delta_bps_vs_B131C": 121.32,
+      "mixed_delta_bps_vs_B131C": 25.30,
+      "mixed_folds_delta_bps_vs_B131C": {"PA100k": 16.8, "PETA": 44.4, "Market1501": 14.7},
+      "sim_public_delta_bps_vs_B131C": 33.42,
+      "sim_public_AP_delta_bps_vs_B131C": 52.36,
+      "sim_public_R1_delta_bps_vs_B131C": 32.93,
+      "codabench_a10_total_s": 252.24
+    },
+    "03_B137C_tri_spherical_multires_head_pe_qk120_b060_hp6_10_eva_t12": {
+      "description": "1) PE-Core-L/14 (280x140, 200 spatial patches) Spatial-SNR Decoupled Spherical Head (tau_qk=1.20 matching patch-entropy ratio log(200)/log(72)=1.24, tau_out=1.00, tau_base=0.60 global pooled background damping); 2) DINOv3-H+/16 (192x96) 6-Recipe Multi-Resolution Spherical Head hp6_10 (0.18*q + 0.27*qr + 0.27*qrq + 0.18*qs + 0.05*224q + 0.05*224qr, tau=1.0, out_scale=1.03); 3) EVA02-L/14 (252x126) 2-Member Multi-Resolution Spherical Head (0.50*eva224 + 0.50*eva252, tau_base=1.20)",
+      "oof33k_mADM": 0.671415,
+      "oof33k_delta_bps_vs_B131C": 40.82,
+      "oof33k_delta_bps_vs_B135C": 17.18,
+      "oof33k_delta_bps_vs_B136C": 3.76,
+      "oof33k_AP_delta_bps_vs_B131C": 53.75,
+      "oof33k_AP_delta_bps_vs_B136C": 5.47,
+      "oof33k_R1_delta_bps_vs_B131C": 26.00,
+      "oof33k_R1_delta_bps_vs_B136C": 5.78,
+      "oof33k_R10_delta_bps_vs_B131C": 132.87,
+      "oof33k_R10_delta_bps_vs_B136C": 11.55,
+      "mixed_held_mADM": 0.724798,
+      "mixed_delta_bps_vs_B131C": 26.33,
+      "mixed_delta_bps_vs_B136C": 1.03,
+      "mixed_folds_delta_bps_vs_B131C": {"PA100k": 18.3, "PETA": 46.0, "Market1501": 14.7},
+      "sim_public_delta_bps_vs_B131C": 34.74,
+      "sim_public_delta_bps_vs_B136C": 1.32,
+      "sim_public_AP_delta_bps_vs_B131C": 55.08,
+      "sim_public_AP_delta_bps_vs_B136C": 2.72,
+      "sim_public_R1_delta_bps_vs_B131C": 36.40,
+      "sim_public_R1_delta_bps_vs_B136C": 3.47
+    }
+  },
+  "runtime_and_vram_verification": {
+    "dinov3_hp_resolution": [192, 96],
+    "dinov3_hp_tokens": 77,
+    "torchscript_graphs_changed_vs_B124C_B131C_B135C_B136C": false,
+    "pe_feature_head_sha256_unchanged": true,
+    "eva_and_hp_backbone_features_bit_identical": true,
+    "codabench_a10_expected_total_s": "250 - 256s (~44-50s safety margin below 300s limit)",
+    "peak_cuda_reserved_gb": 5.04,
+    "reference_unequal_float32_values": 0,
+    "reference_queries_with_different_ranks": 0
+  }
+}
+

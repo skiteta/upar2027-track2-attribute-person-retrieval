@@ -1,0 +1,33 @@
+{
+ "backbone": "dinov3_hp16_192",
+ "fold": "all",
+ "include_val": true,
+ "cache_dir": "artifacts/runs/20261007T020500+0900_gold_cycle/cache_256x128",
+ "output_dir": "artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqm_all_trainval_seed20261007_ema0.999",
+ "seed": 20261007,
+ "batch_size": 128,
+ "sample_budget": 400000,
+ "max_epochs": 20,
+ "lr": 4e-05,
+ "head_lr": 0.001,
+ "llrd": 0.9,
+ "weight_decay": 0.05,
+ "lp_fraction": 0.1,
+ "warmup_fraction": 0.05,
+ "pos_weight_cap": 20.0,
+ "drop_path_rate": 0.3,
+ "ema_decays": [
+  0.999
+ ],
+ "save_weights": true,
+ "grad_checkpoint": true,
+ "save_lp_state": false,
+ "grad_accum": 4,
+ "save_raw_weights": false,
+ "ckpt_every_steps": 500,
+ "ckpt_min_free_gb": 15,
+ "head": "attrq",
+ "label_mask": "v2",
+ "ema_of": "artifacts/runs/20261008T231500+0900_knob_sweep/d3hpqm_all_trainval_seed20261007",
+ "ema_used": 0.999
+}

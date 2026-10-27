@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "id": "20261017_hplus6_uniform192_v1",
+  "frozen_at": "2026-10-16T18:43:51.526310+00:00",
+  "parent_manifest": {
+    "path": "artifacts/runs/20261017T0345+0900_hplus6/parent_manifest_v1.json",
+    "sha256": "446051ec7c8be9b47699eba0e4750e11f32043e950b7275980b3ff5b6cd697ac"
+  },
+  "cache_meta": {
+    "path": "artifacts/runs/20261007T020500+0900_gold_cycle/cache_256x128/meta.npz",
+    "sha256": "e3d5d942049f0c69ac055d9d1539b79397d6a7fa695a24bbc6f32266256d477b"
+  },
+  "recipe_order": [
+    "d3hpq",
+    "d3hpqr",
+    "d3hpqrq",
+    "d3hpqs",
+    "d3hp224q",
+    "d3hp224qr"
+  ],
+  "weight_per_recipe": 0.16666666666666666,
+  "averaging": "actual FP32 state_dict average in fixed parent order; not probability averaging",
+  "inference_input_hw": [
+    192,
+    96
+  ],
+  "inference_views": [
+    "original"
+  ],
+  "pretrained_base": "pretrained/_h1/vit_huge_plus_patch16_dinov3.lvd1689m/model.safetensors",
+  "compatibility": {
+    "same_architecture": "vit_huge_plus_patch16_dinov3.lvd1689m",
+    "positional_mechanism": "DINOv3 RoPE, dynamic_img_size=True, use_abs_pos_emb=False",
+    "state_schema_exact_match": true,
+    "same_seed": 20261007,
+    "ema": 0.999,
+    "head": "attrq",
+    "same_basin": "supported by shared initialization recipe and prior successful cross-resolution soups; not guaranteed for six-parent soup"
+  },
+  "comparison": {
+    "baseline": "B119G",
+    "folds": [
+      "PA100k",
+      "PETA",
+      "Market1501"
+    ],
+    "external_weights": [
+      0.4,
+      0.35,
+      0.25
+    ],
+    "pe_eva": "unchanged B119G",
+    "post": {
+      "renorm": [
+        [
+          8,
+          20,
+          0.5
+        ]
+      ],
+      "clip": 1e-05,
+      "entropy_delta": 0.1875
+    },
+    "reliability": "unchanged B011 gamma=.5",
+    "tta": false,
+    "fit": "same target-source-excluded parent models for each fold; no target-label fit",
+    "evaluation_role": "already exposed LODO development; not fresh confirmation or Private guarantee",
+    "no_hpo": true,
+    "primary": "paired 3-source macro mADM difference vs B119G",
+    "report": [
+      "each fold",
+      "paired conditional query bootstrap uncertainty",
+      "regressions",
+      "actual full candidate saved artifacts"
+    ],
+    "adoption": "mixed source signs or negligible gain do not establish best candidate; no automatic submission"
+  },
+  "resources": {
+    "cpu_threads": 2,
+    "sequential_fold_order": [
+      "PA100k",
+      "PETA",
+      "Market1501",
+      "all"
+    ],
+    "minimum_available_ram_gib": 16,
+    "new_gpu_execution": "root only",
+    "new_training": false
+  },
+  "source_sha256": {
+    "src/upar/streaming_weight_soup.py": "e6a606a5c101fe0cb9386a6f7964e2a49e8d548eb94e993d6be1618f2701193e",
+    "scripts/prepare_hplus6.py": "f11590386dfd725279ace9467b978dc65de79815e551ef49d29c6e369a3c92a8"
+  }
+}

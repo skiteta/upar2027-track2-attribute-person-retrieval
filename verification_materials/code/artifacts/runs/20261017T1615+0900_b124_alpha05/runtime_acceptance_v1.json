@@ -1,0 +1,44 @@
+{
+  "kind": "b124c_constant_alpha05_runtime_acceptance_v1",
+  "status": "ACCEPTED_RUNTIME_PREFLIGHT",
+  "candidate": "B124C_CONSTANT_RESCUE_ALPHA05",
+  "alpha": 0.5,
+  "artifact": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T1615+0900_b124_alpha05/package_v1/B124C_CONSTANT_RESCUE_ALPHA05.zip",
+    "sha256": "5fae8b2b0d28ce4e313249e5cfb47c6627d0164aaac5a9a54c07288e88c20da7",
+    "size": 1333494436
+  },
+  "verifier_source": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/src/upar/b124c_alpha05_acceptance.py",
+    "sha256": "8b0a1e6857828a255963a911d7f42e55aa0e50e7946595c7a896d249906dab56",
+    "size": 8900
+  },
+  "package_report": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T1615+0900_b124_alpha05/package_v1/complete.json",
+    "sha256": "63010808d5c299751416b2ed35d4a9d019ed3f26c0f9a2384400b8dc050622ac",
+    "size": 47839
+  },
+  "parent_artifact": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T1422+0900_b123_alpha03/package_v1/B123C_CONSTANT_RESCUE_ALPHA03.zip",
+    "sha256": "4d85d05f147472354ce21f30009e9f5a7b7c2a79ff0c9ab5d12b4c3a307afb40",
+    "size": 1333494436
+  },
+  "parent_official_receipt": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T1422+0900_b123_alpha03/watch_v1/final_receipt.json",
+    "sha256": "d4d8a8bf7faa6c6007972ce097c3a908db10322563d19ecaf6ad364608e74074",
+    "size": 4520
+  },
+  "runtime_report": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T1615+0900_b124_alpha05/full_replay_v1/execute_report.json",
+    "sha256": "43d790c59c741f34835b0d98353232dadeefe0cf479458943c01611a20fc93ed",
+    "size": 39523
+  },
+  "reference_report": {
+    "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261017T1615+0900_b124_alpha05/reference_v1/report.json",
+    "sha256": "b2224bf942146097e8eb549bc22247e7466369abc26b1c4bb1b9354a3548dcbd",
+    "size": 3443
+  },
+  "official_hardware_runtime_guaranteed": false,
+  "grants_submission_authority": false,
+  "quality_or_gold_claim": false
+}

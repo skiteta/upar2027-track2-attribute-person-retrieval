@@ -1,0 +1,10 @@
+# trained weights are distributed separately (see weights/README.md)
+weights/*.zip
+verification_materials/*.zip
+out/
+work/
+__pycache__/
+*.pyc
+factsheet/*.log
+factsheet/*.blg
+factsheet/*.aux

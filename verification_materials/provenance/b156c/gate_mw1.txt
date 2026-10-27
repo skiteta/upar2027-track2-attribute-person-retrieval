@@ -1,0 +1,6 @@
+== MW1 combo (4 singles)
+  v_oof +1.6 v_hi15 +1.0 t_oof +2.5 t_hi15 +1.1 v_lo14 +2.2 t_lo14 +2.6
+  train cells: Market[1-4] +2.3(n251) Market[5-14] -0.6(n286) Market[15-inf] +0.6(n232) PA100k[1-4] +3.2(n1509) PA100k[5-14] +5.2(n217) PA100k[15-inf] +0.5(n120) PETA[1-4] +2.1(n1425) PETA[5-14] +5.7(n159) PETA[15-inf] +2.7(n126)
+  val cells:   Market[1-4] +4.6(n264) Market[5-14] +0.4(n260) Market[15-inf] +1.0(n371) PA100k[1-4] +1.9(n850) PA100k[5-14] -0.4(n197) PA100k[15-inf] +1.6(n118) PETA[1-4] +1.9(n1183) PETA[5-14] -1.9(n134) PETA[15-inf] -0.1(n85)
+  train boot all [+1.3,+3.8] P>0 1.000 | >=15 [+0.3,+2.3] P>0 0.999
+  BAR: both-surface positive True | min train cell -0.6 (>= -3: True) | CI excl 0 True => PASS

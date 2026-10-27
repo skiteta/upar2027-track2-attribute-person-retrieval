@@ -1,0 +1,17 @@
+{
+  "submission_id": 1007281,
+  "owner": "syouya_tobita",
+  "metrics": {
+    "mADM": "0.7013950000",
+    "mAP": "0.4181360000",
+    "Rank-1": "0.3944860000",
+    "Rank-5": "0.5674490000",
+    "Rank-10": "0.6427280000",
+    "mINP": "0.2930150000"
+  },
+  "snapshot_rows": 49,
+  "rank": 1,
+  "tied_rows_including_self": 1,
+  "snapshot_sha256": "e1dd6bd0a446c5915ce3529a8df9cc0098826e65027f67bd29b4bc063ba991da",
+  "scope": "Organizer snapshot, pending winner verification."
+}

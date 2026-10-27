@@ -1,0 +1,11 @@
+# Training image matching the recorded training environment: torch 2.8.0 + CUDA 12.8 (Ampere ... Blackwell),
+# timm 1.0.20. GPU bf16 training is not bit-deterministic; recipes reproduce the method, not identical bytes.
+FROM pytorch/pytorch:2.8.0-cuda12.8-cudnn9-runtime
+WORKDIR /opt/upar
+COPY docker/requirements-train.txt /opt/upar/docker/requirements-train.txt
+RUN pip install --no-cache-dir -r /opt/upar/docker/requirements-train.txt
+COPY verification_materials/code /opt/upar/code
+COPY docker/train_all.sh /opt/upar/docker/train_all.sh
+ENV PYTHONPATH=/opt/upar/code/src PYTHONDONTWRITEBYTECODE=1
+WORKDIR /opt/upar/code
+ENTRYPOINT ["bash", "/opt/upar/docker/train_all.sh"]

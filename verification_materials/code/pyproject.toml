@@ -1,0 +1,43 @@
+[project]
+name = "attribute-based-person-retrieval"
+version = "0.1.0"
+description = "Local validation and code-submission tooling for UPAR Challenge 2027 Track 2"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "gdown==5.2.0",
+  "numpy==1.26.4",
+  "pillow==10.4.0",
+  "pyyaml==6.0.2",
+  "requests==2.32.3",
+  "tqdm==4.66.5",
+]
+
+[project.optional-dependencies]
+submission = [
+  "torch==2.4.1+cu121",
+  "torchvision==0.19.1+cu121",
+]
+
+[dependency-groups]
+dev = [
+  "pytest==8.3.5",
+  "ruff==0.9.10",
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu121" }
+torchvision = { index = "pytorch-cu121" }
+
+[[tool.uv.index]]
+name = "pytorch-cu121"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true

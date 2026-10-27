@@ -1,0 +1,52 @@
+{
+ "acceptance": {
+  "path": "/home/syouya/ml/lab/attribute_based_person_retrieval/artifacts/runs/20261021T2250+0900_takeover_knob_search/runtime_acceptance_b153c_v1.json",
+  "sha256": "a4e69ebbcc1980b741516ca032a9c238a795dba07f228f84655138c96cd1fcfd",
+  "size": 2820
+ },
+ "verification": {
+  "kind": "b153c_b139c_rerank_aqe_attrweights_post_runtime_acceptance_v1",
+  "candidate": "B153C_B152C_ATTRW6_L1W_RERANK",
+  "artifact_sha256": "4f65c53b2498cc96b244239fdc0de93f1346832268060784160ecb9e127d6d0f",
+  "parent": {
+   "candidate": "B139C_ANAT_MULTIRES_SPHERICAL_HEAD_RERANK",
+   "submission": null,
+   "sha256": "93507697d74aeba9f27df7b8fb2b411eaccc4f8ac8d1b1990dace1fbe2f4334d"
+  },
+  "changed_members": [
+   "assets/config.json",
+   "b127_jaccard_prob_diffusion.py"
+  ],
+  "rerank_knobs": {
+   "ham_tau": 0.17,
+   "margin": 1.85,
+   "nd": {
+    "q": 0.8,
+    "s": 0.01,
+    "steps": 8
+   },
+   "aprf": {
+    "m": 100,
+    "beta": 0.08,
+    "mode": "nll"
+   },
+   "sc_l1": {
+    "ent_override": 0.15,
+    "lam_override": 0.05,
+    "lam_neg_override": 0.0,
+    "err_gamma": 0.9,
+    "err_gamma_neg": 0.75,
+    "uniform_weights": false,
+    "dich_sym_loss": 0.0,
+    "pos_q_mul": 0.7
+   }
+  },
+  "full_cuda_replay": true,
+  "bit_exact_reference": true,
+  "local_time_scale": 4.0,
+  "val_mADM_submission_models": 0.8377722919888461,
+  "official_runtime": "unknown; same models/run.py as B139C (graph and encoder workload of B136C/B137C, official 252-258 s), rerank knobs may add seconds",
+  "quality_or_gold_claim": false,
+  "submission_authority": false
+ }
+}

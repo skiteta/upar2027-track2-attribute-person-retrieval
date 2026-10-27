@@ -1,0 +1,21 @@
+Rounds B2 and MW1 -- selection rules fixed before any of their results (written 2026-10-27 04:54 JST).
+
+B2 (config-only knobs on B153C, same harness as C1): rn_ltype05 (LowerBody-Type group renormalisation 0.5, post.renorm),
+dba_n3 / dba_n5 / dba_n10 (database-side augmentation of the graph features, pow 3; K keys of the deployed module).
+Rule: as prereg_cal1.txt (val filter, rank by min(v_hi15, v_oof), top-1 confirmed on train with fr_gate.py + mimic PUB >= 0).
+
+MW1 (per-attribute member weights, config-only): for each attribute j, move 0.05 from PE to DINOv3-H+ (pe2hp) and the
+reverse (hp2pe) on top of B153C's member weights. Like B153C's attribute-weight procedure, singles are screened on BOTH
+surfaces: a single is kept only if v_hi15 > 0, v_oof > 0, t_hi15 > 0, t_oof > 0 and no source x multiplicity cell below
+-3 bps on either surface; for an attribute keep at most one direction (larger min of the four deltas). All kept singles are
+combined into ONE config, evaluated on both surfaces and the mimic; it is adopted only if it passes fr_gate.py and PUB >= 0.
+Because both surfaces are used for screening, its local gain will be shrunk by 0.6 in any Public estimate.
+
+C1 outcome (recorded 04:59): no variant passes prereg_cal1.txt (bias raises hi15 +26..+41 bps on both surfaces but lowers
+lo1_4 -12..-94 and overall; temperature negative; platt_s05 passes val but train overall -20.8). C1 is negative.
+C2 (bias-calibration follow-up, rule fixed now, before its results; train is no longer independent for this family):
+bias_s025, bias_s015 (all members), bias_s05 on one member only (pe / hp / eva), platt_s025. Same rule as prereg_cal1.txt.
+
+C3 (05:02, before results): leave-one-source-out cross-fit of the calibration (fit_calib_loso.py: parameters
+applied to source T are fitted on the other surface's images of the two other sources). Configs bias_s05_loso,
+bias_s10_loso, platt_s05_loso. Diagnostic of domain transfer; same adoption rule as prereg_cal1.txt.

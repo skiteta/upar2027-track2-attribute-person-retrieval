@@ -1,0 +1,179 @@
+{
+ "schema": 1,
+ "candidate": "B156C_B155C_K2_RERANK",
+ "status": "FINAL_SUBMISSION_DELIVERY",
+ "official_submission_id": 1011976,
+ "official_results": "artifacts/runs/20261027T0330+0900_final_submission_prep/receipt_b156c_final.json",
+ "origin_build": {
+  "path": "artifacts/runs/20261021T2250+0900_takeover_knob_search/build_b156c_v1/complete.json",
+  "sha256": "9585a8201ebec3c9cd3e8a1b1faedbb125a8fa9eb652278bdef7623b4a6ef416"
+ },
+ "model": {
+  "sha256": "1279da344c73aa8c67ee55703ba7e2c6e7c1b9607e3a182e9c9e70499fb30844",
+  "bytes": 1333500417,
+  "filename": "B156C_B155C_K2_RERANK.zip",
+  "members": [
+   {
+    "path": "assets/config.json",
+    "bytes": 35895,
+    "sha256": "7575d51f9bfffb4f23b72d8a8d62dfbed04b96460dd0d790fb6e07f0decd14f1"
+   },
+   {
+    "path": "assets/fallback_b015.ts",
+    "bytes": 22512287,
+    "sha256": "5aeae3a9eb330ae4592015809ab8070ac95f8c435e896b672b125720692219b6"
+   },
+   {
+    "path": "assets/model_0.block.ts",
+    "bytes": 30670,
+    "sha256": "a4ea250b08b188d1920d8a89b48d041ee8ca14927a9f1205897956845f4856e6"
+   },
+   {
+    "path": "assets/model_0.head.ts",
+    "bytes": 152234,
+    "sha256": "3998fed38dd72ee4ccdb9de554285101696d47a4dd478bf342296cc0f9c12c34"
+   },
+   {
+    "path": "assets/model_0.prefix.ts",
+    "bytes": 139276,
+    "sha256": "4f82f83a9ac1a56f9eaac4e819b59b70d3e2ae152c8bc3f063ea1ab2caf36be4"
+   },
+   {
+    "path": "assets/model_0.weights.pt",
+    "bytes": 317875993,
+    "sha256": "cafc45e636a1e05308867aaa808e946ad52022b9befb7f0f84b4e56b8fc2428b"
+   },
+   {
+    "path": "assets/model_1.block.ts",
+    "bytes": 39643,
+    "sha256": "e1081e135299396d6a1e5f9458e4b1d7af5d9aada16d63620f93ca0a9f1c7bce"
+   },
+   {
+    "path": "assets/model_1.head.ts",
+    "bytes": 61486,
+    "sha256": "c3cb5e01253bc05ca69090cc6dd9b1aaf401d51107d23607324b838170a75a3e"
+   },
+   {
+    "path": "assets/model_1.prefix.ts",
+    "bytes": 56186,
+    "sha256": "7501bf3e6e5ab42172bb9d5b7436a934bcd3dd30a6b430dc798701a041b6f750"
+   },
+   {
+    "path": "assets/model_1.weights.pt",
+    "bytes": 843918689,
+    "sha256": "db06e562543fbb9ab0faa3a3012a8d55c29f8d2268fdaab70048d91d998d102d"
+   },
+   {
+    "path": "assets/model_2.block.ts",
+    "bytes": 39753,
+    "sha256": "9c8b10ade6cf357e5dff0ce52313cd817cc20d2866f3829e9dfc143877042634"
+   },
+   {
+    "path": "assets/model_2.head.ts",
+    "bytes": 103418,
+    "sha256": "974bd2a781e61be90106032e502bd70b8b3582e98e8eb342eba9e0e42206c4d3"
+   },
+   {
+    "path": "assets/model_2.prefix.ts",
+    "bytes": 102094,
+    "sha256": "4ffc7e0b3ddc3f9a167d69f91161bc611906e3a0dd7eedaed6d9b8b08a66958a"
+   },
+   {
+    "path": "assets/model_2.weights.pt",
+    "bytes": 305443681,
+    "sha256": "34dadb3c28ba19407f8aeee4dec8fff3a225c58556463f5997beb8f81292302b"
+   },
+   {
+    "path": "assets/pe_feature_head.ts",
+    "bytes": 50420442,
+    "sha256": "4625b60a3d6d30ce2ac2907e13e2e7679d45dbf902fc28541cc8e8c43207384b"
+   },
+   {
+    "path": "b121_agreement.py",
+    "bytes": 3962,
+    "sha256": "b42cecfee7ed262ff3312ef817d83b416509eb1eb0b197057ce9ebfe0227eb4b"
+   },
+   {
+    "path": "b121_blas.py",
+    "bytes": 2400,
+    "sha256": "23a208f0a194ce7466fb36267909cd3f500e60c2dbbce3cfb7877f4dfd675af8"
+   },
+   {
+    "path": "b121_deadline.py",
+    "bytes": 1657,
+    "sha256": "09cdb8cbe54e6e9e93e997910d42561b1c170aaddb4650e32dea7de206806014"
+   },
+   {
+    "path": "b121_fp32_cosine_graph.py",
+    "bytes": 4084,
+    "sha256": "4f75b54fb3491201581b522a7b54318a7d3a17d8747016ab0675556892067292"
+   },
+   {
+    "path": "b121_gpu_graph.py",
+    "bytes": 4483,
+    "sha256": "53c55c8a9d54c56fe91f5ee6f851dbe7b6b701619c2f8d48edf3c1ddb1f3d0ae"
+   },
+   {
+    "path": "b121_graph.py",
+    "bytes": 7785,
+    "sha256": "c25b794e31160001631575305c89b2f4d90bbe350fa6b23e9f05c62ec172063c"
+   },
+   {
+    "path": "b121_observe.py",
+    "bytes": 1056,
+    "sha256": "d7d286b3af3127989cb8ebdb8d5df5b2bca62180b18f4fd48e812b96172bbc14"
+   },
+   {
+    "path": "b121_runtime.py",
+    "bytes": 3888,
+    "sha256": "a4c2dc22b6689171932256988ea4f79b653c6312c33b60651127e8fec61da466"
+   },
+   {
+    "path": "b122c_constant.py",
+    "bytes": 4007,
+    "sha256": "7c3c99bf2701778fc1483e46526f01a51e248524b93c4b872052196848f7de1b"
+   },
+   {
+    "path": "b127_jaccard_prob_diffusion.py",
+    "bytes": 45774,
+    "sha256": "cc2c8986565f72152fbd77cdbc31471f4bf32d448fd715b86fdb0aac1846304b"
+   },
+   {
+    "path": "licenses/DINOv3_LICENSE.md",
+    "bytes": 7503,
+    "sha256": "25d122eb8f5b880fd23c736fb6ea8018ee45c12237e00b8a86d14c653904999e"
+   },
+   {
+    "path": "licenses/MODEL_CARD_dinov3_hp16_192.md",
+    "bytes": 7916,
+    "sha256": "e37aaa5d81b587bae0d0dbedf9d56491672df524585c46dfa688347eb619989c"
+   },
+   {
+    "path": "licenses/MODEL_CARD_eva02_l14_252.md",
+    "bytes": 5379,
+    "sha256": "18534848c3ef00872379903a239740e87cb6af9c5170c94f432d8e41ff72d6c6"
+   },
+   {
+    "path": "licenses/MODEL_CARD_pe_core_l14_280.md",
+    "bytes": 4375,
+    "sha256": "707efd98717c5f36840a5f1c110cd1c297e48d41939d98653dc3d7807ed4a833"
+   },
+   {
+    "path": "licenses/THIRD_PARTY_NOTICES.txt",
+    "bytes": 352,
+    "sha256": "fa30404c934b2aca2b44005ec1c8be745b6a18728d7f06f234943311da0f40bd"
+   },
+   {
+    "path": "metadata.yaml",
+    "bytes": 361,
+    "sha256": "aa430c8b2fd03ea8c164f4f1b6cc490b9f9228861e54671626cc96096756d984"
+   },
+   {
+    "path": "run.py",
+    "bytes": 31073,
+    "sha256": "973bae5923068e57fc11b6704d4b9aade9c77011ad6ec896e6fefee491379a3b"
+   }
+  ]
+ },
+ "verification_scope": "Not GPU execution, a clean install, scientific improvement or organizer approval."
+}

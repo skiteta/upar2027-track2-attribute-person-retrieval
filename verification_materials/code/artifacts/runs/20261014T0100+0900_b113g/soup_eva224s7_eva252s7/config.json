@@ -1,0 +1,39 @@
+{
+ "backbone": "eva02_l14_252",
+ "fold": "all",
+ "include_val": true,
+ "cache_dir": "artifacts/runs/20261007T020500+0900_gold_cycle/cache_256x128",
+ "output_dir": "artifacts/runs/20261014T0100+0900_b113g/soup_eva224s7_eva252s7",
+ "seed": 20261007,
+ "batch_size": 128,
+ "sample_budget": 400000,
+ "max_epochs": 20,
+ "lr": 5e-05,
+ "head_lr": 0.001,
+ "llrd": 0.85,
+ "weight_decay": 0.05,
+ "lp_fraction": 0.1,
+ "warmup_fraction": 0.05,
+ "pos_weight_cap": 20.0,
+ "drop_path_rate": 0.2,
+ "ema_decays": [
+  0.999
+ ],
+ "save_weights": true,
+ "grad_checkpoint": true,
+ "save_lp_state": false,
+ "grad_accum": 4,
+ "save_raw_weights": false,
+ "ema_of": "artifacts/runs/20261008T231500+0900_knob_sweep/eva02L224_all_trainval_seed20261007",
+ "ema_used": 0.999,
+ "xres_of": "artifacts/runs/20261008T231500+0900_knob_sweep/eva02L224_all_trainval_seed20261007_ema0.999",
+ "note": "pos_embed resampled copy for soups only; val_logits copied for pos_weight only",
+ "soup_of": [
+  "artifacts/runs/20261014T0100+0900_b113g/xres_eva224s7_as252",
+  "artifacts/runs/20261008T231500+0900_knob_sweep/eva02L252_all_trainval_seed20261007_ema0.999"
+ ],
+ "soup_weights": [
+  0.5,
+  0.5
+ ]
+}

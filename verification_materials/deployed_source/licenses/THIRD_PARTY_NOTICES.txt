@@ -1,0 +1,5 @@
+Fine-tuned only on the organiser-provided UPAR training data; initialisations are generic pretrained models not trained for PAR:
+- timm `vit_pe_core_large_patch14_336.fb`
+- timm `vit_huge_plus_patch16_dinov3.lvd1689m`
+- timm `eva02_large_patch14_224.mim_m38m`
+- fallback: torchvision ResNet-18 ImageNet weights (BSD-3-Clause), fine-tuned layer4 (B015)

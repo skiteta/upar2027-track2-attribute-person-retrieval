@@ -1,0 +1,63 @@
+{
+ "pkg": "B137C_TRI_SPHERICAL_MULTIRES_HEAD_RERANK",
+ "seed": 0,
+ "queries": 893,
+ "gallery": 29248,
+ "entry_seconds": 15.371595965931192,
+ "stages": [
+  {
+   "event": "score_enter",
+   "t": 0.001
+  },
+  {
+   "event": "score_blas",
+   "t": 0.001
+  },
+  {
+   "event": "score_done",
+   "t": 0.046
+  },
+  {
+   "event": "graph_enter",
+   "t": 0.046
+  },
+  {
+   "event": "feature_rerank_enter",
+   "t": 0.046
+  },
+  {
+   "event": "b132c_graphs_done",
+   "t": 7.046,
+   "graph_seconds": 6.9749
+  },
+  {
+   "event": "b132c_diff_done",
+   "t": 9.761,
+   "diff_seconds": 2.7143
+  },
+  {
+   "event": "b132c_score_done",
+   "t": 11.211,
+   "score_seconds": 1.4506
+  },
+  {
+   "event": "b132c_pentj_body_rerank",
+   "t": 15.36,
+   "graph_seconds": 6.9749,
+   "total_seconds": 15.2885
+  },
+  {
+   "event": "feature_reranked",
+   "t": 15.371,
+   "total_seconds": 15.3247
+  },
+  {
+   "event": "ranked",
+   "t": 15.372
+  }
+ ],
+ "distances_sha_raw": "00b3efa87bad11fdd7f9e4ff3268957f0373c6aa32291637f468c578e3c8ffa4",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+ "peak_gpu_reserved_gib": 5.5078125,
+ "time": "2026-10-27 03:28:17"
+}

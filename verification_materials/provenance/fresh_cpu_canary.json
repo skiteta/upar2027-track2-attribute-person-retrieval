@@ -1,0 +1,48 @@
+{
+  "status": "PASS_CPU_SYNTHETIC_CANARIES",
+  "candidate": "B137C_TRI_SPHERICAL_MULTIRES_HEAD_RERANK",
+  "model_sha256": "bae4b4c90846bf243d79bf65b5e0929dba5b0725903731c50fea264a05a83077",
+  "verifier_sha256": "b4c865e71c2e76c541f57d02d186303b177b90b1008ff9f0f102bfb7565020ba",
+  "torch": "2.4.1+cu121",
+  "threads": 2,
+  "members": [
+    {
+      "name": "vit0_pe_core_l14_280",
+      "shape": [
+        4,
+        40
+      ],
+      "finite": true,
+      "max_abs": 8.940696716308594e-08,
+      "mean_abs": 6.9423551352088e-09,
+      "seconds": 2.964994154055603,
+      "pass": true
+    },
+    {
+      "name": "vit1_dinov3_hp16_192",
+      "shape": [
+        4,
+        40
+      ],
+      "finite": true,
+      "max_abs": 1.1920928955078125e-07,
+      "mean_abs": 1.908192714950019e-08,
+      "seconds": 3.5594057549024,
+      "pass": true
+    },
+    {
+      "name": "vit2_eva02_l14_252",
+      "shape": [
+        4,
+        40
+      ],
+      "finite": true,
+      "max_abs": 2.980232238769531e-07,
+      "mean_abs": 2.8640249283284902e-08,
+      "seconds": 2.358103526988998,
+      "pass": true
+    }
+  ],
+  "seconds": 13.59847076900769,
+  "scope": "Four fixed synthetic inputs per member; CPU loader + forward compatibility only. No full ranking, GPU timing, clean install or generalization claim."
+}

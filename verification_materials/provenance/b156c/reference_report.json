@@ -1,0 +1,10 @@
+{
+ "status": "PASS",
+ "candidate": "B156C_B155C_K2_RERANK",
+ "unequal_distance_values": 0,
+ "queries_with_different_ranks": 0,
+ "distance_max_abs": 0.0,
+ "val_mADM_submission_models": 0.8376964713740882,
+ "zip_sha256": "1279da344c73aa8c67ee55703ba7e2c6e7c1b9607e3a182e9c9e70499fb30844",
+ "wall_seconds": 45.73559089307673
+}
