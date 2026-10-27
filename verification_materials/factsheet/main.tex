@@ -227,9 +227,9 @@ Only as an image backbone: PE-Core-L/14 is the vision encoder of Meta's Percepti
 \section{Code repository}\label{sec:code}
 Link to a code repository with complete and detailed instructions so that the results obtained on Codabench can be reproduced locally. This includes a list of requirements, pre-trained models, and so on. Note, training code with instructions is also required. This is required for all participants to appear in the final ranking. \textbf{Organizers strongly encourage the use of docker to facilitate reproducibility}. \\
 
-\textbf{Code repository:} \url{REPOSITORY_URL}
+\textbf{Code repository:} \url{https://github.com/skiteta/upar2027-track2-attribute-person-retrieval}
 
-\textbf{Trained weights:} \url{WEIGHTS_URL} (the exact submitted file \path{B156C_B155C_K2_RERANK.zip}, 1{,}333{,}500{,}417 bytes), SHA-256:\par
+\textbf{Trained weights:} \url{https://drive.google.com/drive/folders/11rweLAHfE9Guxz0lcI38KrlAe3X4Bgw_?usp=sharing} (the exact submitted file \path{B156C_B155C_K2_RERANK.zip}, 1{,}333{,}500{,}417 bytes), SHA-256:\par
 \noindent\resizebox{\columnwidth}{!}{\texttt{1279da344c73aa8c67ee55703ba7e2c6e7c1b9607e3a182e9c9e70499fb30844}}
 
 The repository provides an inference Docker image built on the Codabench runner image (\path{pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime}) that verifies and runs the submitted ZIP through its \path{run.py} on a public split and scores the output, a training Docker image with the recorded environment (PyTorch 2.8, \texttt{timm} 1.0.20) and a script that retrains the 13 recipes, the full source code, the original configurations, the soup/head/packaging scripts and an offline verification script for all delivered files.

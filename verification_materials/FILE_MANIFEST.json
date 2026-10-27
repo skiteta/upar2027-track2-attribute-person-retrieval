@@ -2003,13 +2003,13 @@
   },
   {
    "path": "factsheet/main.pdf",
-   "bytes": 59680,
-   "sha256": "ac60738208fc843055ca3584aa31fa7a371d5ccc983e3c3e8b7d8895217f0c42"
+   "bytes": 60004,
+   "sha256": "de97c05734939e13b8ed4e74110582dedde198549a0dab59a52d1ae355bb20cb"
   },
   {
    "path": "factsheet/main.tex",
-   "bytes": 20594,
-   "sha256": "35b67eded8eaeaa7fb64bfdb7fe5952eab182e0cc0ea718239a359b731cff99b"
+   "bytes": 20722,
+   "sha256": "684becf6ebdc1b80c9a6b267501df5b9918c4e3710169a766521449f48ea4bde"
   },
   {
    "path": "factsheet/references.bib",

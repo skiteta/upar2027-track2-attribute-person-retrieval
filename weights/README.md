@@ -2,7 +2,7 @@
 
 | File | Size | SHA-256 | Download |
 |---|---|---|---|
-| `B156C_B155C_K2_RERANK.zip` (exact Codabench final submission 1011976: `run.py`, 3 TorchScript networks, heads, config, licences) | 1,333,500,417 bytes | `1279da344c73aa8c67ee55703ba7e2c6e7c1b9607e3a182e9c9e70499fb30844` | WEIGHTS_URL |
+| `B156C_B155C_K2_RERANK.zip` (exact Codabench final submission 1011976: `run.py`, 3 TorchScript networks, heads, config, licences) | 1,333,500,417 bytes | `1279da344c73aa8c67ee55703ba7e2c6e7c1b9607e3a182e9c9e70499fb30844` | https://drive.google.com/drive/folders/11rweLAHfE9Guxz0lcI38KrlAe3X4Bgw_?usp=sharing |
 
 Place the file in this folder (`weights/`). It is not stored in git because of its size.
 
