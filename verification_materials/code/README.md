@@ -1,3 +1,5 @@
+> **Historical document.** This README describes the earlier entry B137C (submission 1007281). The final submission is **B156C**; start from [`../README.md`](../README.md) and the repository [`README.md`](../../README.md).
+
 # B137C — official Track 2 verification materials (no workshop paper)
 
 This delivery describes **submission 1007281**, owner `syouya_tobita`, B137C.

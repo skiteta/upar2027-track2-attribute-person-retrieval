@@ -50,7 +50,7 @@ Extract the model ZIP into a new `entry/` directory. The ingestion program impor
 starter-kit contract. For a complete organiser validation split, from `code/`:
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m upar.execute_submission \
+PYTHONPATH=src:../entry .venv/bin/python -m upar.execute_submission \
   --submission-dir ../entry \
   --split-dir starter_kit/data/annotations/task2/val \
   --image-root starter_kit/data \
@@ -64,8 +64,10 @@ only the internal deadline checks). B137C's official run took 258.3 s of 300 s (
 
 ## Training data, pretraining and recipes
 
-Use only the organisers' Track 2 release (starter kit); place its data under `code/starter_kit/data`. The six small
-annotation/sample fixtures included for unit tests are not a dataset. The final models are trained on all three
+Use only the organisers' Track 2 release (starter kit); place its data under `code/starter_kit/data`. That directory
+already holds the small validation fixtures used by the unit tests, which are not a dataset: move it aside first
+(`mv starter_kit/data starter_kit/data.fixtures && ln -s /path/to/starter_kit/data starter_kit/data`;
+`../docker/train_all.sh` does this). The final models are trained on all three
 sources' train + validation splits, as permitted (131,075 images after dropping one exact-pixel duplicate).
 
 Recorded training environment: Python 3.11.17, torch 2.8.0+cu128, torchvision 0.23.0+cu128, timm 1.0.20,
@@ -109,7 +111,9 @@ python3 scripts/prepare_delivery_training.py --code-root . --cache ../training_c
 PYTHONPATH=src .venv-train/bin/python -m upar.h1_finetune train --config ../training_new/configs/peL280_attrq.json
 ```
 
-Repeat the last command for every config in `training_new/configs/` (`../docker/train_all.sh` does this).
+Repeat the last command for every config in `training_new/configs/` (`../docker/train_all.sh` does this). Each run
+writes `training_new/runs/<recipe>` and its EMA copy `training_new/runs/<recipe>_ema0.999`; the assembly below uses
+the original layout, so link each EMA copy as `$R/<recipe>_all_trainval_seed20261007_ema0.999` first.
 
 ## Assembly
 
@@ -127,16 +131,25 @@ directory; `R=artifacts/runs/20261008T231500+0900_knob_sweep`, `S=seed20261007`.
 3. **EVA member**: `scripts/make_xres_member.py $R/eva02L224_all_trainval_${S}_ema0.999 eva02_l14_252 OUT/xres_eva224s7_as252` (pos-embed 16×8 → 18×9, bicubic, antialias), then `-m upar.h1_finetune soup --runs OUT/xres_eva224s7_as252 $R/eva02L252_all_trainval_${S}_ema0.999 --output OUT/soup_eva224s7_eva252s7`; spherical head soup 0.5/0.5, τ = 1.2.
 4. **Heads and int8 member weights** (CPU scripts in `artifacts/runs/20261017T2145+0900_b127_jaccard_prob_diffusion/`):
    `pack_hp4_2030_192_cpu.py`, `pack_b136c_spherical_heads_cpu.py`, `pack_b137c_tri_spherical_heads_cpu.py`,
-   `pack_b138c_colselective_heads_cpu.py dich3_ltype2_r00` (column-selective DINOv3 head).
+   `pack_b138c_colselective_heads_cpu.py dich3_ltype2_r00` (column-selective DINOv3 head). These scripts also read the
+   earlier B124 package (`model_{0,1,2}.weights.pt`, `run.py`, `config.json`) as key templates and a saved head
+   backup (`extracted_features_v1/extra_heads_backup_v1.pt`), which are not shipped, so this step is documented
+   rather than re-runnable from this repository alone.
 5. **Graphs and runtime code**: the weight-free TorchScript graphs come from the B119G build
    (`artifacts/runs/20261016T1710+0900_b119g/pipeline_b119g.sh` → `upar.h1_package`), and `run.py` / `b121_*` /
    `b122c_constant.py` from the documented adapter chain followed by `build_b127c.py` (B139C ZIP). The
    intermediate adapter ZIPs were deleted, so this chain is documented rather than re-runnable; the deployed
    files are shipped verbatim in the model ZIP and in `deployed_source/`.
-6. **Re-ranking constants, member and attribute weights**:
-   `artifacts/runs/20261021T2250+0900_takeover_knob_search/build_candidate.py spec_b153c.json OUT_DIR` builds
-   B153C from the B139C ZIP (`spec_b153c.json` holds the member weights, attribute-weight multipliers and knob
-   overrides on top of `rerank_param4_frozen.py`).
+6. **Re-ranking constants, member and attribute weights**: the final submission B156C is built by
+   `scripts/train_python artifacts/runs/20261021T2250+0900_takeover_knob_search/build_candidate.py ../provenance/b156c/spec_b156c.json artifacts/runs/20261021T2250+0900_takeover_knob_search/build_b156c_new`
+   (the output directory must be new and inside that run directory). `spec_b156c.json` holds the per-attribute member
+   weights (including the four final moves for upper-body orange and pink, lower-body green and sunglasses), the
+   attribute-weight multipliers (including Age-Young $\div$1.2, Accessory-Glasses-Sun $\times$1.2 and
+   UpperBody-Color-Red $\div$1.1) and the knob overrides on top of `rerank_param4_frozen.py` (diffusion step 1.0).
+   It starts from the B139C ZIP (SHA-256 `93507697d74aeba9f27df7b8fb2b411eaccc4f8ac8d1b1990dace1fbe2f4334d`;
+   set `parent_zip` in the spec to its location), which is not shipped, so this step is documented rather than
+   re-runnable; its result is the shipped B156C ZIP, whose differences from B153C are listed in
+   `provenance/b156c/diff_vs_b153c.json`.
 
 Limits: BF16/GPU training is not bit-deterministic, so retraining reproduces the method, not identical bytes. The
 shipped int8 weights were re-derived bit-exactly from the surviving fp32 EMA checkpoints for all three members

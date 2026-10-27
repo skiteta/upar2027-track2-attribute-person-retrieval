@@ -8,7 +8,10 @@ set -euo pipefail
 DATA_ROOT=$1; PRETRAINED=$2; WORK=$3
 PY=${PYTHON:-python3}
 mkdir -p "$WORK" starter_kit
-[ -e starter_kit/data ] || ln -s "$DATA_ROOT" starter_kit/data
+if [ ! -L starter_kit/data ]; then
+  [ -e starter_kit/data ] && mv starter_kit/data starter_kit/data.fixtures
+  ln -s "$DATA_ROOT" starter_kit/data
+fi
 [ -e pretrained ] || ln -s "$PRETRAINED" pretrained
 $PY -m upar.h1_finetune cache --out-dir "$WORK/cache" --workers 4
 $PY scripts/prepare_delivery_training.py --code-root . --cache "$WORK/cache" --output "$WORK/training"

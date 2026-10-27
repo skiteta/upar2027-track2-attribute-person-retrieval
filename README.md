@@ -56,17 +56,18 @@ image folders `Market1501/`, `PA100k/`, `PETA/`) downloaded with the official st
 `out/distances.npy` (Q×G float32), `out/report.json` (load/inference seconds, output hash) and `out/metrics.json`.
 Any other folder in the same starter-kit format can be passed as the 4th argument (relative to `/data/annotations/task2/`).
 
-Expected result on the public validation split (3,462 queries × 33,407 images), measured with this script:
+Expected result on the public validation split (3,462 queries × 33,407 images), from the same execution path:
 see [`weights/README.md`](weights/README.md#reference-run). The final models were trained on train+validation, so
 these validation numbers are an execution check, not an accuracy estimate.
 
 GPU note: torch 2.4.1+cu121 supports Ampere to Hopper GPUs (the official runs used an A10). For Blackwell GPUs use
-the training image (torch 2.8 + CUDA 12.8) with the same command line: `PYTHON=python3 bash docker/run_inference.sh ...`.
+an environment with torch 2.8 + CUDA 12.8 (for example the training image with this repository mounted and
+`--entrypoint bash`) and the command under "Without Docker" below.
 
 Without Docker (Python 3.11 + torch 2.4.1 + numpy + Pillow):
 
 ```bash
-PYTHONPATH=verification_materials/code/src bash docker/run_inference.sh \
+PYTHONPATH=$PWD/verification_materials/code/src bash docker/run_inference.sh \
   weights/B156C_B155C_K2_RERANK.zip /path/to/starter_kit/data out val
 ```
 

@@ -56,7 +56,7 @@ def main() -> None:
         "pooled_gallery": {("m" + k if k in ("ADM", "AP", "INP") else k.replace("R", "Rank-")): float(v.mean()) for k, v in arr.items()},
         "per_majority_source_of_matches": {s: {"queries": int((q_source == s).sum()), "mADM": float(arr["ADM"][q_source == s].mean())}
                                            for s in np.unique(q_source)},
-        "note": "Evaluated with the whole split as one gallery. Final B137C models were trained on train+validation, so "
+        "note": "Evaluated with the whole split as one gallery. Final B156C models were trained on train+validation, so "
                 "validation scores are in-sample execution checks, not accuracy estimates.",
     }
     a.out.parent.mkdir(parents=True, exist_ok=True)

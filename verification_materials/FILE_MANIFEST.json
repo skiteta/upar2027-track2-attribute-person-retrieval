@@ -8,8 +8,8 @@
   },
   {
    "path": "README.md",
-   "bytes": 12981,
-   "sha256": "8c7f3ccc04c10ecd7854cf807d094593c7f6eb7d18f5fedc93dfe7559d4510b8"
+   "bytes": 14487,
+   "sha256": "d36979026709ba3f0b9d4ac377c0201e3518ec9dbdac948d4b4101808f6d6290"
   },
   {
    "path": "VERIFICATION.md",
@@ -23,13 +23,13 @@
   },
   {
    "path": "code/HISTORICAL_SNAPSHOT_README.md",
-   "bytes": 7544,
-   "sha256": "8499773f91fd03dbb4c7fd97279c60b12a14d756a1e432ed4e940c3a2eecc43c"
+   "bytes": 7635,
+   "sha256": "ac584da1b7c267e5d23eee3bbda4a76e99c94d722e6e42ee2f240fb4c5264eb8"
   },
   {
    "path": "code/README.md",
-   "bytes": 9617,
-   "sha256": "bc33748504d9453a60b5b28e7e8149f24a857a31738d02eea53b40f43189c637"
+   "bytes": 9841,
+   "sha256": "610352937cfaffae8990472bb4800ae7b4f89084115988ad245eb0bdabb6582c"
   },
   {
    "path": "code/artifacts/runs/20261003T134237325056065+0900_b011_crossfit_attribute_reliability/reliability_search.json",
@@ -2003,13 +2003,13 @@
   },
   {
    "path": "factsheet/main.pdf",
-   "bytes": 49665,
-   "sha256": "79b22abbc6ba25ed52e8d696e032816c92eff26905e478a2093efde9ebd4f3f6"
+   "bytes": 59680,
+   "sha256": "ac60738208fc843055ca3584aa31fa7a371d5ccc983e3c3e8b7d8895217f0c42"
   },
   {
    "path": "factsheet/main.tex",
-   "bytes": 20348,
-   "sha256": "d2d0fe1cc8dabe06242eaa6664defd122f10d78e66f606de965c45f28b0fc79e"
+   "bytes": 20594,
+   "sha256": "35b67eded8eaeaa7fb64bfdb7fe5952eab182e0cc0ea718239a359b731cff99b"
   },
   {
    "path": "factsheet/references.bib",

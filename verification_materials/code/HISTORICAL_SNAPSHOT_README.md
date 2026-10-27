@@ -1,4 +1,4 @@
-# Code snapshot for UPAR 2027 Track 2 final candidate B153C
+# Code snapshot for UPAR 2027 Track 2 (taken for candidate B153C; the final submission B156C is built from it with `provenance/b156c/spec_b156c.json`)
 
 Snapshot taken 2026-10-22 22:00 JST from the working repository. Every file was **copied** (content and mtime preserved), not
 moved. Each copy was compared byte for byte with its source after copying. Sizes and SHA-256 values are in
